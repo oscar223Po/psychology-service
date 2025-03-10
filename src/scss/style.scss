@@ -178,14 +178,19 @@ body {
 		position: relative;
 		&::before {
 			content: "";
-			top: toRem(-200);
-			width: toRem(670);
-			right: toRem(-250);
+			z-index: -1;
+			width: toRem(400);
+			height: toRem(600);
 			position: absolute;
-			height: toRem(500);
-			filter: blur(240px);
+			filter: blur(190px);
+			transform: rotate(90deg);
+			border-radius: toRem(50);
 			background-color: $purpleColor;
-			border-radius: toRem(150) toRem(0);
+			@include adaptiveValue("top", -350, -370);
+			@include adaptiveValue("right", -250, -400);
+			@media (max-width: $mobileSmall) {
+				filter: blur(150px);
+			}
 		}
 	}
 	// .hero__body
