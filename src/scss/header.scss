@@ -1,0 +1,59 @@
+// Header
+.header {
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+	transition:
+		background-color 0.5s,
+		box-shadow 0.5s;
+	&._header-scroll {
+		background-color: #fff;
+		box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+	}
+	// .header__container
+	&__container {
+		display: flex;
+		gap: toRem(10);
+		flex-wrap: wrap;
+		position: relative;
+		align-items: center;
+		padding-top: toRem(10);
+		padding-bottom: toRem(10);
+		transition: min-height 0.5s;
+		justify-content: space-between;
+		@include adaptiveValue("min-height", 112, 56);
+		._header-scroll & {
+			@include adaptiveValue("min-height", 92, 46);
+		}
+	}
+	// .header__logo
+	&__logo {
+		line-height: 117%;
+		transition: opacity 0.3s;
+		@include adaptiveValue("font-size", 48, 20);
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	// .header__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 16);
+	}
+	// .header__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap", 24, 8);
+	}
+	// .header__social
+	&__social {
+		svg {
+			@include adaptiveValue("width", 64, 24);
+			@include adaptiveValue("height", 64, 24);
+		}
+	}
+}

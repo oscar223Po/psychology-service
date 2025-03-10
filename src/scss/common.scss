@@ -1,0 +1,78 @@
+//========================================================================================================================================================
+// Заголовки, загальні БЕМ блоки та інше...
+//========================================================================================================================================================
+::-webkit-scrollbar {
+	width: toRem(1);
+	background-color: #fff;
+	border-radius: toRem(10);
+}
+::-webkit-scrollbar-thumb {
+	border-radius: toRem(10);
+	background-color: $mainColor;
+}
+::selection {
+	background-color: rgba(#a60101, 0.5);
+}
+summary {
+	list-style: none;
+	&::marker {
+		display: none;
+	}
+}
+@supports (-webkit-appearance: none) {
+	summary::-webkit-details-marker {
+		display: none;
+	}
+}
+//========================================================================================================================================================
+// Hover on social icons
+.social-hover {
+	svg {
+		path {
+			fill: $mainColor;
+			transition: fill 0.3s ease;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					fill: $purpleColor;
+				}
+			}
+		}
+	}
+}
+// Image
+.img {
+	overflow: hidden;
+	@include adaptiveValue("border-radius", 24, 18);
+	img {
+		transform: scale(1.02);
+	}
+}
+// Box Shadow
+.shad {
+	box-shadow:
+		rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+// Icon Box
+.icon-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $purpleColor;
+	@include adaptiveValue("height", 100, 40);
+	@include adaptiveValue("min-width", 100, 40);
+	@include adaptiveValue("border-radius", 24, 12);
+}
+// Title
+.title {
+	font-weight: 600;
+	line-height: 117%;
+	@include adaptiveValue("font-size", 48, 20);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 64, 24);
+	}
+}

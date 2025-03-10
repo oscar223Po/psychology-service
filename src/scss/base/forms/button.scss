@@ -1,0 +1,40 @@
+// Button
+.button {
+	display: inline-flex;
+	&--link {
+		transition: color 0.3s;
+		@include adaptiveValue("padding", 8, 2);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpleColor;
+			}
+		}
+	}
+	&--yellow {
+		font-weight: 600;
+		line-height: 133%;
+		text-align: center;
+		align-items: center;
+		padding-top: toRem(8);
+		justify-content: center;
+		background: $yellowColor;
+		padding-bottom: toRem(8);
+		transition: background-color 0.3s;
+		@include adaptiveValue("min-height", 80, 38);
+		@include adaptiveValue("padding-left", 48, 16);
+		@include adaptiveValue("border-radius", 40, 32);
+		@include adaptiveValue("padding-right", 48, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				background: #b7ed18;
+			}
+		}
+		&:active {
+			color: #fff;
+			background: linear-gradient(90deg, #2b2a30 0%, #87858d 100%);
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}
