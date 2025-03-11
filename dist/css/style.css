@@ -481,8 +481,8 @@ summary::marker {
 .how__label {
   color: #000;
   opacity: 0;
-  -webkit-transform: translate(-30px,0);
-  transform: translate(-30px,0);
+  -webkit-transform: translate(0,30px);
+  transform: translate(0,30px);
   transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
   transition: opacity .65s ease .3s,transform .65s ease .3s;
   transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s
@@ -1173,7 +1173,7 @@ summary::marker {
     width: 1.25rem
   }
   .icon-box--number {
-    font-size: .75rem
+    font-size: 1rem
   }
   .icon-box--clock svg {
     width: 1.3125rem
@@ -1670,7 +1670,7 @@ summary::marker {
     width: clamp(1.25rem ,.8254716981rem + 2.1226415094vw ,2.9375rem)
   }
   .icon-box--number {
-    font-size: clamp(.75rem ,.2783018868rem + 2.358490566vw ,2.625rem)
+    font-size: clamp(1rem ,.5911949686rem + 2.0440251572vw ,2.625rem)
   }
   .icon-box--clock svg {
     width: clamp(1.3125rem ,.7936320755rem + 2.5943396226vw ,3.375rem)

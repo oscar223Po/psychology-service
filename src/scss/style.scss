@@ -370,7 +370,7 @@ body {
 	&__label {
 		color: #000;
 		opacity: 0;
-		transform: translate(-30px, 0px);
+		transform: translate(0px, 30px);
 		transition:
 			opacity 0.65s ease 0.3s,
 			transform 0.65s ease 0.3s;

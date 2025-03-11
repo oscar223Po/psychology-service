@@ -97,7 +97,7 @@ summary {
 	&--number {
 		font-weight: 600;
 		color: $yellowColor;
-		@include adaptiveValue("font-size", 42, 12);
+		@include adaptiveValue("font-size", 42, 16);
 	}
 	&--clock {
 		svg {
