@@ -29,6 +29,8 @@ $yellowColor: #daff6d; // Колір шрифту за замовчування�
 $grayColor: #c0c0c0; // Колір шрифту за замовчуванням
 $grayLiteColor: #f3f3f3; // Колір шрифту за замовчуванням
 
+$blackGradient: linear-gradient(90deg, #2b2a30 0%, #87858d 100%); // Колір шрифту за замовчуванням
+
 // Палітра кольорів
 // @import "base/colors-palette";
 
@@ -173,36 +175,83 @@ body {
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 80, 24);
 	}
+	// .hero__svg
+	&__svg {
+		position: absolute;
+		&--one {
+			@include adaptiveValue("top", -150, -30);
+			@include adaptiveValue("width", 438, 100);
+			@include adaptiveValue("right", -110, -24);
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		&--two {
+			@include adaptiveValue("width", 439, 120);
+			@include adaptiveValue("right", -115, -24);
+			@include adaptiveValue("bottom", -130, -30);
+		}
+	}
 	// .hero__container
 	&__container {
 		position: relative;
-		&::before {
+		&::before,
+		&::after {
 			content: "";
 			z-index: -1;
-			width: toRem(400);
-			height: toRem(600);
+			border-radius: 50%;
 			position: absolute;
-			filter: blur(190px);
-			transform: rotate(90deg);
-			border-radius: toRem(50);
 			background-color: $purpleColor;
-			@include adaptiveValue("top", -350, -370);
-			@include adaptiveValue("right", -250, -400);
+		}
+		&::before {
+			top: 0;
+			right: 0;
+			filter: blur(190px);
+			transform: translate(50%, -50%);
+			@include adaptiveValue("width", 800, 300);
+			@include adaptiveValue("height", 450, 150);
+			@media (max-width: $mobile) {
+				filter: blur(110px);
+				transform: translate(40%, -65%);
+			}
 			@media (max-width: $mobileSmall) {
-				filter: blur(150px);
+				filter: blur(80px);
+			}
+		}
+		&::after {
+			bottom: 0;
+			filter: blur(340px);
+			transform: translate(-65%, 20%) rotate(45deg);
+			@include adaptiveValue("width", 780, 300);
+			@include adaptiveValue("height", 530, 150);
+			@media (max-width: $mobile) {
+				display: none;
 			}
 		}
 	}
 	// .hero__body
 	&__body {
+		opacity: 0;
+		transform: translate(0px, 30px);
+		transition:
+			opacity 0.65s ease 0.3s,
+			transform 0.65s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
 		overflow: hidden;
 		position: relative;
+		border: 1px solid rgba(255, 255, 255, 0.95);
 		background: url("@img/hero.jpg") right top / cover no-repeat;
 		@include adaptiveValue("padding-top", 92, 24);
 		@include adaptiveValue("padding-left", 80, 16);
 		@include adaptiveValue("padding-right", 80, 16);
 		@include adaptiveValue("border-radius", 24, 18);
 		@include adaptiveValue("padding-bottom", 92, 24);
+		@media (max-width: $mobileSmall) {
+			border: 0.5px solid rgba(255, 255, 255, 0.95);
+		}
 		&::before {
 			top: 0;
 			left: 0;
@@ -224,6 +273,7 @@ body {
 	}
 	// .hero__inner
 	&__inner {
+		z-index: 1;
 		position: relative;
 	}
 	// .hero__heading
@@ -273,9 +323,40 @@ body {
 	@include adaptiveValue("padding-bottom", 82, 24);
 	// .how__container
 	&__container {
-	}
-	// .how__title
-	&__title {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			z-index: -1;
+			border-radius: 50%;
+			position: absolute;
+			filter: blur(190px);
+			background-color: $purpleColor;
+			@include adaptiveValue("width", 600, 300);
+			@include adaptiveValue("height", 400, 200);
+			@media (max-width: $mobile) {
+				filter: blur(110px);
+			}
+		}
+		&::before {
+			top: 0;
+			right: 0;
+			transform: translate(60%, -20%);
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		&::after {
+			bottom: 0;
+			transform: translate(-60%, 20%);
+			@media (min-width: $mobile) {
+				left: 0;
+			}
+			@media (max-width: $mobile) {
+				right: 0;
+				transform: translate(35%, 30%);
+			}
+		}
 	}
 	// .how__blocks
 	&__blocks {
@@ -285,72 +366,413 @@ body {
 			@include adaptiveValue("margin-bottom", 24, 16);
 		}
 	}
-	// .how__block
-	&__block {
-	}
 	// .how__label
 	&__label {
 		color: #000;
-		line-height: 125%;
-		@include adaptiveValue("font-size", 32, 14);
+		opacity: 0;
+		transform: translate(-30px, 0px);
+		transition:
+			opacity 0.65s ease 0.3s,
+			transform 0.65s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
 	}
 }
 .block-how {
-	overflow: hidden;
-	position: relative;
-	@include adaptiveValue("padding", 40, 8);
-	@include adaptiveValue("border-radius", 24, 16);
-	&::before {
-		top: 0;
-		left: 0;
-		content: "";
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		filter: blur(40px);
-		background: linear-gradient(66deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+	opacity: 0;
+	transform: translate(0px, 30px);
+	transition:
+		opacity 0.65s ease 0.3s,
+		transform 0.65s ease 0.3s;
+	&._watcher-view {
+		opacity: 1;
+		transform: translate(0px, 0px);
 	}
+	@include adaptiveValue("padding", 40, 8);
 	// .block-how__body
 	&__body {
 		display: flex;
 		position: relative;
 		@include adaptiveValue("gap", 24, 8);
 	}
-	// .block-how__icon
-	&__icon {
-		// .block-how__icon--01
-		&--01 {
-			svg {
-				@include adaptiveValue("width", 34, 14);
-			}
-		}
-		// .block-how__icon--02
-		&--02 {
-			svg {
-				@include adaptiveValue("width", 47, 20);
+}
+// Our
+.our {
+	@include adaptiveValue("padding-top", 82, 24);
+	@include adaptiveValue("padding-bottom", 82, 24);
+	// .our__container
+	&__container {
+		position: relative;
+		&::before {
+			bottom: 0;
+			content: "";
+			z-index: -1;
+			border-radius: 50%;
+			position: absolute;
+			filter: blur(340px);
+			background-color: $purpleColor;
+			transform: translate(-65%, 20%) rotate(45deg);
+			@include adaptiveValue("width", 780, 300);
+			@include adaptiveValue("height", 530, 150);
+			@media (max-width: $mobile) {
+				filter: blur(110px);
+				transform: translate(-65%, -100%) rotate(45deg);
 			}
 		}
 	}
-	// .block-how__content
+	// .our__title
+	&__title {
+		text-align: center;
+	}
+	// .our__body
+	&__body {
+		display: grid;
+		margin: 0 auto;
+		max-width: toRem(1160);
+		@include adaptiveValue("gap", 32, 24);
+	}
+	// .our__block
+	&__block {
+	}
+}
+.block-our {
+	opacity: 0;
+	transform: translate(0px, 30px);
+	transition:
+		opacity 0.65s ease 0.3s,
+		transform 0.65s ease 0.3s;
+	&._watcher-view {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+	display: grid;
+	@include adaptiveValue("gap", 24, 16);
+	@include adaptiveValue("padding", 40, 14);
+	box-shadow:
+		rgba($purpleColor, 0.3) 5px 5px,
+		rgba($purpleColor, 0.2) 10px 10px,
+		rgba($purpleColor, 0.1) 15px 15px,
+		rgba($purpleColor, 0.05) 20px 20px;
+	@media (min-width: $mobile) {
+		grid-template-columns: 50.862069% 1fr;
+	}
+	&.back-blure {
+		border: 1px solid rgba($purpleColor, 0.25);
+	}
+	&:nth-child(2) {
+		.block-our__image {
+			img {
+				object-position: left;
+			}
+		}
+	}
+	// .block-our__content
 	&__content {
-		@include adaptiveValue("font-size", 32, 12);
+		display: flex;
+		@include adaptiveValue("gap", 24, 8);
 	}
-	// .block-how__title
+	// .block-our__icon
+	&__icon {
+	}
+	// .block-our__text
+	&__text {
+	}
+	// .block-our__image
+	&__image {
+	}
+}
+// Product
+.product {
+	@include adaptiveValue("padding-top", 82, 24);
+	@include adaptiveValue("padding-bottom", 82, 24);
+	// .product__container
+	&__container {
+		position: relative;
+		&::before {
+			top: 50%;
+			right: 0;
+			content: "";
+			z-index: -1;
+			border-radius: 50%;
+			position: absolute;
+			filter: blur(190px);
+			background-color: $purpleColor;
+			transform: translate(75%, -50%) rotate(45deg);
+			@include adaptiveValue("width", 600, 300);
+			@include adaptiveValue("height", 400, 200);
+			@media (max-width: $mobile) {
+				filter: blur(110px);
+				transform: translate(40%, -5%) rotate(0deg);
+			}
+		}
+	}
+	// .product__title
+	&__title {
+	}
+	// .product__items
+	&__items {
+		display: grid;
+		align-items: start;
+		@include adaptiveValue("gap", 40, 18);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+.item-product {
+	overflow: hidden;
+	position: relative;
+	border: 2px solid rgba(255, 255, 255, 0.95);
+	background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
+	@include adaptiveValue("padding", 24, 12);
+	@include adaptiveValue("border-radius", 24, 16);
+	@media (min-width: $mobile) {
+		&:first-child {
+			opacity: 0;
+			transition:
+				opacity 0.65s ease 0.3s,
+				transform 0.65s ease 0.3s;
+			transform: translate(-30px, 0px);
+			&._watcher-view {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+		&:last-child {
+			opacity: 0;
+			transition:
+				opacity 0.65s ease 0.3s,
+				transform 0.65s ease 0.3s;
+			transform: translate(30px, 0px);
+			&._watcher-view {
+				opacity: 1;
+				transform: translate(0px, 0px);
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		opacity: 0;
+		transform: translate(0px, 30px);
+		transition:
+			opacity 0.65s ease 0.3s,
+			transform 0.65s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		border: 1px solid rgba(255, 255, 255, 0.95);
+	}
+	// .item-product__inner
+	&__inner {
+		height: 100%;
+		box-shadow: 0 40px 80px rgba(#8380d1, 0.45);
+		@include adaptiveValue("padding-top", 40, 16);
+		@include adaptiveValue("padding-left", 24, 12);
+		@include adaptiveValue("border-radius", 24, 16);
+		@include adaptiveValue("padding-right", 24, 12);
+		@include adaptiveValue("padding-bottom", 24, 12);
+	}
+	// .item-product__heading
+	&__heading {
+		display: grid;
+		grid-template-rows: 1fr auto;
+		@include adaptiveValue("min-height", 550, 400, 2, $containerWidth, 767.98);
+		@media (min-width: $mobile) {
+			row-gap: toRem(15);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("row-gap", 20, 15, 0, 767.98, 320);
+		}
+	}
+	// .item-product__title
 	&__title {
 		font-weight: 600;
 		line-height: 125%;
+		text-align: center;
+		@include adaptiveValue("font-size", 32, 20, 2, $containerWidth, 767.98);
 		&:not(:last-child) {
-			margin-bottom: toRem(3);
+			@include adaptiveValue("margin-bottom", 24, 16);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 20, 16, 0, 767.98, 320);
 		}
 	}
-	// .block-how__items
-	&__items {
-		line-height: 133%;
+	// .item-product__list
+	&__list {
+		li {
+			list-style: circle;
+		}
+		@include adaptiveValue("padding-left", 40, 20);
 	}
-	// .block-how__item
+	// .item-product__bottom
+	&__bottom {
+		display: grid;
+		@include adaptiveValue("gap", 24, 16);
+	}
+	// .item-product__price
+	&__price {
+		font-weight: 600;
+		line-height: 125%;
+		text-align: center;
+		@include adaptiveValue("font-size", 32, 20, 2, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 20, 16, 0, 767.98, 320);
+		}
+	}
+	// .item-product__button
+	&__button {
+		&.button--yellow {
+			padding: 0;
+			width: 100%;
+		}
+	}
+	// .item-product__items
+	&__items {
+		display: grid;
+		border-top: 1px solid rgba($purpleColor, 0.45);
+		@include adaptiveValue("gap", 24, 16);
+		@include adaptiveValue("margin-top", 38, 22);
+		@include adaptiveValue("padding-top", 38, 22);
+	}
+	// .item-product__item
 	&__item {
-		span {
-			font-weight: 600;
+		display: flex;
+		@include adaptiveValue("gap", 24, 12);
+	}
+}
+// Compare
+.compare {
+	@include adaptiveValue("padding-top", 82, 24);
+	@include adaptiveValue("padding-bottom", 82, 24);
+	// .compare__container
+	&__container {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			z-index: -1;
+			border-radius: 50%;
+			position: absolute;
+			filter: blur(190px);
+			background-color: $purpleColor;
+			@include adaptiveValue("width", 600, 300);
+			@include adaptiveValue("height", 400, 200);
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		&::before {
+			right: 0;
+			bottom: 0;
+			transform: translate(60%, 20%);
+		}
+		&::after {
+			top: 0;
+			left: 0;
+			transform: translate(-60%, -20%);
+		}
+	}
+	// .compare__title
+	&__title {
+	}
+	// .compare__body
+	&__body {
+		opacity: 0;
+		transform: translate(0px, 30px);
+		transition:
+			opacity 0.65s ease 0.3s,
+			transform 0.65s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
+		@include adaptiveValue("padding", 40, 8);
+	}
+	// .compare__head
+	&__head {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("gap", 24, 7);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 12);
+		}
+	}
+	// .compare__subtitle
+	&__subtitle {
+		display: flex;
+		font-weight: 600;
+		line-height: 125%;
+		align-items: center;
+		@include adaptiveValue("padding", 16, 8);
+		@include adaptiveValue("font-size", 32, 10);
+		@include adaptiveValue("border-radius", 16, 12);
+		&:first-child {
+			background-color: $yellowColor;
+		}
+		&:last-child {
+			color: #fff;
+			background: $blackGradient;
+		}
+		@media (max-width: $mobile) {
+			text-align: center;
+			justify-content: center;
+		}
+	}
+	// .compare__items
+	&__items {
+		display: grid;
+		@include adaptiveValue("gap", 16, 8);
+	}
+	// .compare__item
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("gap", 24, 7);
+		&:not(:last-child) {
+			.compare__label {
+				padding-bottom: toRem(18);
+				border-bottom: 1px solid rgba($mainColor, 0.25);
+				@media (max-width: $mobileSmall) {
+					border-bottom: 1px solid rgba($mainColor, 0.1);
+				}
+			}
+		}
+	}
+	// .compare__label
+	&__label {
+		display: flex;
+		line-height: 125%;
+		position: relative;
+		@include adaptiveValue("gap", 16, 4);
+		@include adaptiveValue("font-size", 32, 10);
+		@include adaptiveValue("padding-top", 18, 4);
+		@include adaptiveValue("padding-bottom", 18, 4);
+		@include adaptiveValue("padding-left", 18, 4);
+		@include adaptiveValue("padding-right", 18, 4);
+		&::before {
+			content: "";
+			border-radius: 50%;
+			@include adaptiveValue("height", 16, 4);
+			@include adaptiveValue("min-width", 16, 4);
+			@include adaptiveValue("margin-top", 13, 5);
+		}
+		&:first-child {
+			&::before {
+				border: 1px solid $purpleColor;
+				background-color: $yellowColor;
+				@media (max-width: $mobile) {
+					border: 0.2px solid $purpleColor;
+				}
+			}
+		}
+		&:last-child {
+			&::before {
+				background: $blackGradient;
+			}
 		}
 	}
 }

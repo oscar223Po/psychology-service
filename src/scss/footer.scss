@@ -1,1 +1,136 @@
 // Footer
+.footer {
+	position: relative;
+	border-top: 1px solid rgba(255, 255, 255, 0.45);
+	background: linear-gradient(34deg, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 100%);
+	box-shadow:
+		rgba($purpleColor, 0.05) 0px -15px 25px,
+		rgba($purpleColor, 0.05) 0px -5px 10px;
+	@include adaptiveValue("padding-top", 82, 24);
+	@include adaptiveValue("margin-top", 132, 70);
+	@include adaptiveValue("padding-bottom", 82, 24);
+	&::after {
+		left: 0;
+		right: 0;
+		z-index: -1;
+		content: "";
+		margin: 0 auto;
+		position: absolute;
+		border-radius: 50%;
+		background-color: $purpleColor;
+		filter: blur(279.6000061035156px);
+		@include adaptiveValue("height", 290, 75);
+		@include adaptiveValue("width", 2200, 320);
+		@media (min-width: $mobile) {
+			bottom: 0;
+			transform: translate(0px, 50%);
+		}
+		@media (max-width: $mobile) {
+			top: 0;
+			transform: translate(0px, -50%);
+			filter: blur(209.6000061035156px);
+		}
+		@media (max-width: $mobileSmall) {
+			filter: blur(65.69999694824219px);
+		}
+	}
+	&::before {
+		left: 0;
+		bottom: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		filter: blur(50px);
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
+	}
+	@media (max-width: $mobileSmall) {
+		border-top: 1px solid rgba(255, 255, 255, 0.15);
+	}
+	// .footer__container
+	&__container {
+		display: grid;
+		position: relative;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	// .footer__aside
+	&__aside {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+	}
+	// .footer__logo
+	&__logo {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 8);
+		}
+	}
+	// .footer__license
+	&__license {
+		line-height: 125%;
+		display: inline-flex;
+		@include adaptiveValue("font-size", 18, 12);
+		&.button--link {
+			padding: 0;
+		}
+	}
+	// .footer__actions
+	&__actions {
+		display: flex;
+		gap: toRem(16);
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// .footer__action
+	&__action {
+		&:last-child {
+			@media (min-width: $mobile) {
+				.footer__label {
+					display: none;
+				}
+			}
+		}
+	}
+	// .footer__label
+	&__label {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 12);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 8);
+		}
+	}
+	// .footer__link
+	&__link {
+		display: flex;
+		gap: toRem(4);
+		align-items: center;
+		&.button--link {
+			padding: 0;
+		}
+		span {
+			@include adaptiveValue("font-size", 24, 10);
+		}
+	}
+	// .footer__icon
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("width", 40, 20);
+		@include adaptiveValue("height", 40, 20);
+		@include adaptiveValue("padding-top", 4, 2);
+		svg {
+			@include adaptiveValue("width", 32, 16);
+		}
+	}
+	// .footer__social
+	&__social {
+		svg {
+			@include adaptiveValue("width", 64, 24);
+			@include adaptiveValue("height", 64, 24);
+		}
+	}
+}
