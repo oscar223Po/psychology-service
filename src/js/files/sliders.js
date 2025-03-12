@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,16 +28,16 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.psych__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.psych__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 4,
+			spaceBetween: 16,
 			//autoHeight: true,
 			speed: 800,
 
@@ -57,12 +57,10 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.dotts-psych',
 				clickable: true,
 			},
-			*/
 
 			// Скроллбар
 			/*
@@ -74,31 +72,98 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.controls-psych--prev',
+				nextEl: '.controls-psych--next',
 			},
-			/*
 			// Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+				320: {
+					slidesPerView: 1.2,
+				},
+				490: {
+					slidesPerView: 1.5,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 2.5,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					slidesPerView: 3.5,
 				},
-				1268: {
+				1300: {
 					slidesPerView: 4,
-					spaceBetween: 30,
 				},
 			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.psych__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.case__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 16,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			*/
+
+			// Пагінація
+			pagination: {
+				el: '.dotts-case',
+				clickable: true,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.controls-case--prev',
+				nextEl: '.controls-case--next',
+			},
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1.2,
+				},
+				490: {
+					slidesPerView: 1.5,
+				},
+				768: {
+					slidesPerView: 2.5,
+				},
+				992: {
+					slidesPerView: 3.5,
+				},
+				1300: {
+					slidesPerView: 4,
+				},
+			},
 			// Події
 			on: {
 
