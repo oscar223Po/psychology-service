@@ -173,9 +173,12 @@ body {
 // ========================================================================================================================================================
 // Hero
 .hero {
-	@include adaptiveValue("padding-top", 176, 68);
+	@include adaptiveValue("padding-top", 176, 110, 2, 1920, 1024);
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 80, 24);
+	}
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("padding-top", 110, 68, 0, 1024, 320);
 	}
 	// .hero__svg
 	&__svg {
@@ -244,16 +247,19 @@ body {
 		}
 		overflow: hidden;
 		position: relative;
-		border: 1px solid rgba(255, 255, 255, 0.95);
+		border: 2px solid rgba(255, 255, 255, 0.95);
 		background: url("@img/hero.jpg") right top / cover no-repeat;
-		@include adaptiveValue("padding-top", 92, 24);
-		@include adaptiveValue("padding-left", 80, 16);
-		@include adaptiveValue("padding-right", 80, 16);
 		@include adaptiveValue("border-radius", 24, 18);
-		@include adaptiveValue("padding-bottom", 92, 24);
-		@include adaptiveValue("background-position-x", 0, -70, 2, $containerWidth, 991.98);
-		@media (max-width: $tablet) {
-			@include adaptiveValue("background-position-x", -70, -210, 2, 991.98, 479.98);
+		@include adaptiveValue("background-position-x", 0, -150, 2, 767.98, 479.98);
+		@include adaptiveValue("padding-top", 92, 36, 2, 1920, 1024);
+		@include adaptiveValue("padding-left", 80, 30, 2, 1920, 1024);
+		@include adaptiveValue("padding-right", 80, 30, 2, 1920, 1024);
+		@include adaptiveValue("padding-bottom", 92, 36, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("padding-top", 36, 24, 0, 1024, 320);
+			@include adaptiveValue("padding-left", 30, 16, 0, 1024, 320);
+			@include adaptiveValue("padding-right", 30, 16, 0, 1024, 320);
+			@include adaptiveValue("padding-bottom", 36, 24, 0, 1024, 320);
 		}
 		&::before {
 			top: 0;
@@ -263,15 +269,14 @@ body {
 			height: 100%;
 			position: absolute;
 			background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 212, 255, 0) 100%);
-		}
-		@media (max-width: $mobile) {
-			&::before {
+			@media (max-width: $mobile) {
 				background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
 			}
 		}
 		@media (max-width: $mobileSmall) {
-			border: 0.5px solid rgba(255, 255, 255, 0.95);
-			background: url("@img/hero.jpg") right -190px top / cover no-repeat;
+			border: 1px solid rgba(255, 255, 255, 0.95);
+			background: url("@img/hero.jpg") right top / cover no-repeat;
+			@include adaptiveValue("background-position-x", -100, -320, 2, 479.98, 320);
 		}
 	}
 	// .hero__inner
@@ -283,35 +288,52 @@ body {
 	&__heading {
 		color: #fff;
 		display: grid;
-		@include adaptiveValue("gap", 32, 14);
+		@include adaptiveValue("gap", 32, 24, 2, 1920, 1024);
 		@include adaptiveValue("max-width", 890, 320, 2, $containerWidth, 479.98);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("gap", 24, 14, 0, 1024, 320);
+		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 56, 16);
+			@include adaptiveValue("margin-bottom", 56, 28, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("margin-bottom", 28, 16, 0, 1024, 320);
+			}
 		}
 	}
 	// .hero__title
 	&__title {
 		font-weight: 600;
 		line-height: 117%;
-		@include adaptiveValue("font-size", 48, 16);
-		// @include adaptiveValue("max-width", 890, 320, 2, $containerWidth, 479.98);
+		@include adaptiveValue("font-size", 48, 24, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 24, 16, 0, 1024, 320);
+		}
 	}
 	// .hero__text
 	&__text {
 		line-height: 125%;
-		@include adaptiveValue("font-size", 32, 14);
-		/* 		@include adaptiveValue("max-width", 890, 600, 2, $containerWidth, 1289.98);
-		@media (max-width: toEm(1289.98)) {
-			@include adaptiveValue("max-width", 600, 320, 2, 1289.98, 479.98);
-		} */
+		@include adaptiveValue("font-size", 32, 18, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 18, 14, 0, 1024, 320);
+		}
 	}
 	// .hero__button
 	&__button {
-		@include adaptiveValue("font-size", 24, 12);
+		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 56, 16);
+			@include adaptiveValue("margin-bottom", 56, 28, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("margin-bottom", 28, 16, 0, 1024, 320);
+			}
 		}
 		&.button--yellow {
+			@include adaptiveValue("min-height", 80, 54, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("min-height", 54, 38, 0, 1024, 320);
+			}
 			@media (max-width: $mobileSmall) {
 				padding: 0;
 				width: 100%;
@@ -322,7 +344,11 @@ body {
 	&__blockquote {
 		color: #fff;
 		line-height: 133%;
+		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
 		@include adaptiveValue("max-width", 755, 300, 2, $containerWidth, 479.98);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 16, 14, 0, 1024, 320);
+		}
 	}
 }
 // How
@@ -533,7 +559,7 @@ body {
 .item-product {
 	overflow: hidden;
 	position: relative;
-	border: 2px solid rgba(255, 255, 255, 0.95);
+	border: 2px solid $purpleColor;
 	background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
 	@include adaptiveValue("padding", 24, 12);
 	@include adaptiveValue("border-radius", 24, 16);
