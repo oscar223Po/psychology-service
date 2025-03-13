@@ -227,9 +227,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   font-weight: 600;
   line-height: 117%
 }
@@ -478,9 +478,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   overflow: hidden;
   position: relative;
   border: 2px solid rgba(255,255,255,.95);
@@ -551,9 +551,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .how__label._watcher-view {
   opacity: 1;
@@ -564,9 +564,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .block-how._watcher-view {
   opacity: 1;
@@ -604,9 +604,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: grid;
   box-shadow: rgba(131,128,209,.3) 5px 5px,rgba(131,128,209,.2) 10px 10px,rgba(131,128,209,.1) 15px 15px,rgba(131,128,209,.05) 20px 20px
 }
@@ -715,9 +715,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s;
-  transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .compare__body._watcher-view {
   opacity: 1;
@@ -772,9 +772,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: flex;
   align-items: center;
   justify-content: space-between
@@ -792,9 +792,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .psych__slider._watcher-view {
   opacity: 1;
@@ -829,9 +829,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: flex;
   align-items: center;
   justify-content: space-between
@@ -849,9 +849,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .case__slider._watcher-view {
   opacity: 1;
@@ -878,9 +878,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
 }
 .main-chose__head._watcher-view {
   opacity: 1;
@@ -904,9 +904,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: flex;
   align-items: center
 }
@@ -923,9 +923,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: flex;
   justify-content: center
 }
@@ -944,9 +944,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,30px);
   transform: translate(0,30px);
-  transition: opacity 1s ease .1s,-webkit-transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s;
-  transition: opacity 1s ease .1s,transform 1s ease .1s,-webkit-transform 1s ease .1s;
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
   display: flex;
   align-items: center;
   flex-direction: column
@@ -1019,9 +1019,9 @@ summary::marker {
   }
   .item-product:first-child {
     opacity: 0;
-    transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s;
+    transition: opacity .65s ease,-webkit-transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
     -webkit-transform: translate(-30px,0);
     transform: translate(-30px,0)
   }
@@ -1032,9 +1032,9 @@ summary::marker {
   }
   .item-product:last-child {
     opacity: 0;
-    transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s;
+    transition: opacity .65s ease,-webkit-transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
     -webkit-transform: translate(30px,0);
     transform: translate(30px,0)
   }
@@ -1610,28 +1610,28 @@ summary::marker {
     padding-bottom: 1.5rem
   }
   .hero__heading {
-    gap: .875rem
+    gap: .75rem
   }
   .hero__heading:not(:last-child) {
     margin-bottom: 1rem
   }
   .hero__title {
-    font-size: 1rem
-  }
-  .hero__text {
     font-size: .875rem
   }
-  .hero__button {
+  .hero__text {
     font-size: .75rem
+  }
+  .hero__button {
+    font-size: .625rem
   }
   .hero__button:not(:last-child) {
     margin-bottom: 1rem
   }
   .hero__button.button--yellow {
-    min-height: 2.375rem
+    min-height: 2rem
   }
   .hero__blockquote {
-    font-size: .875rem
+    font-size: .75rem
   }
 }
 @media (max-width:20em) {
@@ -2160,6 +2160,15 @@ summary::marker {
   .hero__body::before {
     background: linear-gradient(90deg,rgba(0,0,0,.7) 0,rgba(0,0,0,.25) 100%)
   }
+  .hero__title {
+    line-height: 125%
+  }
+  .hero__text {
+    line-height: 133%
+  }
+  .hero__blockquote {
+    line-height: 125%
+  }
   .how__container::after,
   .how__container::before {
     -webkit-filter: blur(110px);
@@ -2189,9 +2198,9 @@ summary::marker {
     opacity: 0;
     -webkit-transform: translate(0,30px);
     transform: translate(0,30px);
-    transition: opacity .65s ease .3s,-webkit-transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s;
-    transition: opacity .65s ease .3s,transform .65s ease .3s,-webkit-transform .65s ease .3s
+    transition: opacity .65s ease,-webkit-transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease;
+    transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease
   }
   .item-product._watcher-view {
     opacity: 1;
@@ -2251,15 +2260,11 @@ summary::marker {
     filter: blur(80px)
   }
   .hero__body {
-    border: 1px solid rgba(255,255,255,.95);
     background: url(../img/hero.webp) right top/cover no-repeat
   }
   .hero__button.button--yellow {
     padding: 0;
     width: 100%
-  }
-  .item-product {
-    border: 1px solid rgba(255,255,255,.95)
   }
   .compare__item:not(:last-child) .compare__label {
     border-bottom: 1px solid rgba(43,42,48,.1)
@@ -2269,6 +2274,11 @@ summary::marker {
     filter: blur(150px);
     -webkit-transform: translate(-60%,-10%);
     transform: translate(-60%,-10%)
+  }
+}
+@media (max-width:29.99875em)and (max-width:20em) {
+  .hero__inner {
+    max-width: 13.125rem
   }
 }
 @media (min-width:20em)and (max-width:104.375em) {
@@ -2861,28 +2871,28 @@ summary::marker {
     padding-bottom: clamp(1.5rem ,1.1590909091rem + 1.7045454545vw ,2.25rem)
   }
   .hero__heading {
-    gap: clamp(.875rem ,.5909090909rem + 1.4204545455vw ,1.5rem)
+    gap: clamp(.75rem ,.4090909091rem + 1.7045454545vw ,1.5rem)
   }
   .hero__heading:not(:last-child) {
     margin-bottom: clamp(1rem ,.6590909091rem + 1.7045454545vw ,1.75rem)
   }
   .hero__title {
-    font-size: clamp(1rem ,.7727272727rem + 1.1363636364vw ,1.5rem)
+    font-size: clamp(.875rem ,.5909090909rem + 1.4204545455vw ,1.5rem)
   }
   .hero__text {
-    font-size: clamp(.875rem ,.7613636364rem + .5681818182vw ,1.125rem)
+    font-size: clamp(.75rem ,.5795454545rem + .8522727273vw ,1.125rem)
   }
   .hero__button {
-    font-size: clamp(.75rem ,.6363636364rem + .5681818182vw ,1rem)
+    font-size: clamp(.625rem ,.4545454545rem + .8522727273vw ,1rem)
   }
   .hero__button:not(:last-child) {
     margin-bottom: clamp(1rem ,.6590909091rem + 1.7045454545vw ,1.75rem)
   }
   .hero__button.button--yellow {
-    min-height: clamp(2.375rem ,1.9204545455rem + 2.2727272727vw ,3.375rem)
+    min-height: clamp(2rem ,1.375rem + 3.125vw ,3.375rem)
   }
   .hero__blockquote {
-    font-size: clamp(.875rem ,.8181818182rem + .2840909091vw ,1rem)
+    font-size: clamp(.75rem ,.6363636364rem + .5681818182vw ,1rem)
   }
 }
 @media (min-width:29.99875em)and (max-width:47.99875em) {
@@ -2892,20 +2902,26 @@ summary::marker {
 }
 @media (max-width:29.99875em)and (min-width:29.99875em) {
   .hero__body {
-    background-position-x: -6.25rem
+    background-position-x: -9.375rem
+  }
+  .hero__inner {
+    max-width: 17.5rem
   }
 }
 @media (max-width:29.99875em)and (min-width:20em)and (max-width:29.99875em) {
   .hero__body {
-    background-position-x: clamp(-20rem ,-47.5034379297rem + 137.5171896487vw ,-6.25rem)
+    background-position-x: clamp(-17.5rem ,-33.7520315039rem + 81.2601575197vw ,-9.375rem)
+  }
+  .hero__inner {
+    max-width: clamp(13.125rem ,4.3739061133rem + 43.7554694337vw ,17.5rem)
   }
 }
 @media (min-width:29.99875em)and (max-width:104.375em) {
   .hero__heading {
-    max-width: clamp(20rem ,5.6310923346rem + 47.8983546495vw ,55.625rem)
+    max-width: clamp(17.5rem ,2.122747937rem + 51.2596426951vw ,55.625rem)
   }
   .hero__blockquote {
-    max-width: clamp(18.75rem ,7.2800824776rem + 38.2346515185vw ,47.1875rem)
+    max-width: clamp(17.5rem ,5.5259102788rem + 39.9152955413vw ,47.1875rem)
   }
 }
 @media (min-width:47.99875em)and (max-width:104.375em) {

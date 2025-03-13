@@ -147,8 +147,8 @@ summary {
 	opacity: 0;
 	transform: translate(0px, 30px);
 	transition:
-		opacity 1s ease 0.1s,
-		transform 1s ease 0.1s;
+		opacity 0.65s ease,
+		transform 0.65s ease;
 	&._watcher-view {
 		opacity: 1;
 		transform: translate(0px, 0px);
