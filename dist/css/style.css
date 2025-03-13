@@ -193,7 +193,9 @@ summary::marker {
   transition: opacity .3s
 }
 .logo img {
-  width: 4.6875rem
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .social-hover svg path {
   fill: #2b2a30;
@@ -960,6 +962,9 @@ summary::marker {
   .logo {
     font-size: 3rem
   }
+  .logo img {
+    height: 4.6875rem
+  }
   .img {
     border-radius: 1.5rem
   }
@@ -1532,6 +1537,9 @@ summary::marker {
   }
   .logo {
     font-size: 1.25rem
+  }
+  .logo img {
+    height: 2.5rem
   }
   .img {
     border-radius: 1rem
@@ -2189,6 +2197,9 @@ summary::marker {
   }
   .logo {
     font-size: clamp(1.25rem ,.8351851852rem + 2.0740740741vw ,3rem)
+  }
+  .logo img {
+    height: clamp(2.5rem ,1.9814814815rem + 2.5925925926vw ,4.6875rem)
   }
   .img {
     border-radius: clamp(1rem ,.8814814815rem + .5925925926vw ,1.5rem)
