@@ -30,6 +30,9 @@ summary {
 	line-height: 117%;
 	transition: opacity 0.3s;
 	@include adaptiveValue("font-size", 48, 20);
+	img {
+		width: toRem(75);
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			opacity: 0.7;

@@ -182,6 +182,7 @@ body {
 	}
 	// .hero__svg
 	&__svg {
+		z-index: 1;
 		position: absolute;
 		&--one {
 			@include adaptiveValue("top", -150, -30);
@@ -239,7 +240,6 @@ body {
 		overflow: hidden;
 		position: relative;
 		border: 2px solid rgba(255, 255, 255, 0.95);
-		background: url("@img/hero/hero.jpg") right top / cover no-repeat;
 		@include adaptiveValue("border-radius", 24, 18);
 		@include adaptiveValue("padding-top", 92, 36, 2, 1920, 1024);
 		@include adaptiveValue("padding-left", 80, 30, 2, 1920, 1024);
@@ -251,12 +251,10 @@ body {
 			@include adaptiveValue("padding-right", 30, 16, 0, 1024, 320);
 			@include adaptiveValue("padding-bottom", 36, 24, 0, 1024, 320);
 		}
-		@media (max-width: $mobile) {
-			background: url("@img/hero/hero-mob.jpg") right top / cover no-repeat;
-		}
 		&::before {
 			top: 0;
 			left: 0;
+			z-index: 1;
 			content: "";
 			width: 100%;
 			height: 100%;
@@ -266,16 +264,24 @@ body {
 				background: linear-gradient(230deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.75) 100%);
 			}
 		}
-		@media (max-width: toEm(589.98)) {
-			@include adaptiveValue("background-position-x", 0, -70, 2, 589.98, 445);
-		}
-		@media (max-width: toEm(445)) {
-			@include adaptiveValue("background-position-x", -70, -100, 0, 445, 320);
+	}
+	// .hero__picture
+	&__picture {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
 		}
 	}
 	// .hero__inner
 	&__inner {
-		z-index: 1;
+		z-index: 3;
 		position: relative;
 	}
 	// .hero__heading
