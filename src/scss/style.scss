@@ -193,8 +193,8 @@ body {
 		}
 		&--two {
 			@include adaptiveValue("width", 439, 120);
-			@include adaptiveValue("right", -115, -34);
-			@include adaptiveValue("bottom", -130, -40);
+			@include adaptiveValue("right", -115, -29);
+			@include adaptiveValue("bottom", -130, -35);
 		}
 	}
 	// .hero__container
@@ -263,7 +263,7 @@ body {
 			position: absolute;
 			background: linear-gradient(90deg, rgba(#000, 0.45) 0%, rgba(#000, 0) 100%);
 			@media (max-width: $mobile) {
-				background: linear-gradient(90deg, rgba(#000, 0.45) 0%, rgba(#000, 0.1) 100%);
+				background: linear-gradient(230deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%);
 			}
 		}
 		@media (max-width: toEm(589.98)) {
@@ -327,7 +327,10 @@ body {
 	&__button {
 		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 11, 0, 1024, 320);
+			@include adaptiveValue("font-size", 16, 12, 2, 1024, 370);
+		}
+		@media (max-width: toEm(370)) {
+			@include adaptiveValue("font-size", 12, 11, 0, 370, 320);
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 56, 28, 2, 1920, 1024);
