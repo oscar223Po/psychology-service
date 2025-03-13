@@ -1486,11 +1486,6 @@ summary::marker {
     font-size: .6875rem
   }
 }
-@media (max-width:64em)and (max-width:23.4375em) {
-  .hero__text {
-    font-size: .75rem
-  }
-}
 @media (max-width:20em) {
   body {
     font-size: .875rem
@@ -2018,7 +2013,7 @@ summary::marker {
     background: url(../img/hero/hero-mob.webp) right top/cover no-repeat
   }
   .hero__body::before {
-    background: linear-gradient(230deg,rgba(0,0,0,0) 20%,rgba(0,0,0,.65) 100%)
+    background: linear-gradient(230deg,rgba(0,0,0,0) 20%,rgba(0,0,0,.75) 100%)
   }
   .hero__title {
     line-height: 125%
@@ -2146,6 +2141,9 @@ summary::marker {
 @media (max-width:23.4375em)and (max-width:20em) {
   .hero__title {
     font-size: .875rem
+  }
+  .hero__text {
+    font-size: .75rem
   }
 }
 @media (max-width:23.125em)and (max-width:20em) {
@@ -2765,17 +2763,17 @@ summary::marker {
 }
 @media (max-width:36.87375em)and (min-width:27.8125em)and (max-width:36.87375em) {
   .hero__body {
-    background-position-x: clamp(-1.25rem ,-5.0867362934rem + 13.7950068975vw ,.0000000625rem)
+    background-position-x: clamp(-4.375rem ,-17.8035765472rem + 48.2825224169vw ,.0000000625rem)
   }
 }
 @media (max-width:27.8125em)and (min-width:27.8125em) {
   .hero__body {
-    background-position-x: -1.25rem
+    background-position-x: -4.375rem
   }
 }
 @media (max-width:27.8125em)and (min-width:20em)and (max-width:27.8125em) {
   .hero__body {
-    background-position-x: clamp(-6.25rem ,-19.05rem + 64vw ,-1.25rem)
+    background-position-x: clamp(-6.25rem ,-11.05rem + 24vw ,-4.375rem)
   }
 }
 @media (min-width:29.99875em)and (max-width:104.375em) {
@@ -2807,17 +2805,23 @@ summary::marker {
     font-size: clamp(1rem ,.7110939908rem + 1.2326656394vw ,1.5rem)
   }
   .hero__text {
-    font-size: clamp(.75rem ,.5333204931rem + .9244992296vw ,1.125rem)
+    font-size: clamp(.8125rem ,.6319337442rem + .7704160247vw ,1.125rem)
   }
 }
 @media (max-width:23.4375em)and (min-width:23.4375em) {
   .hero__title {
     font-size: 1rem
   }
+  .hero__text {
+    font-size: .8125rem
+  }
 }
 @media (max-width:23.4375em)and (min-width:20em)and (max-width:23.4375em) {
   .hero__title {
     font-size: clamp(.875rem ,.1477272727rem + 3.6363636364vw ,1rem)
+  }
+  .hero__text {
+    font-size: clamp(.75rem ,.3863636364rem + 1.8181818182vw ,.8125rem)
   }
 }
 @media (max-width:64em)and (min-width:23.125em)and (max-width:64em) {
