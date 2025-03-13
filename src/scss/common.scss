@@ -144,14 +144,19 @@ summary {
 }
 // Title
 .title {
-	opacity: 0;
+	opacity: 0.1;
 	transform: translate(0px, 30px);
+	-webkit-transform: translate(0px, 30px);
 	transition:
 		opacity 0.65s ease,
 		transform 0.65s ease;
+	-webkit-transition:
+		opacity 0.65s ease,
+		-webkit-transform 0.65s ease;
 	&._watcher-view {
 		opacity: 1;
 		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
 	}
 	font-weight: 600;
 	line-height: 117%;
@@ -333,5 +338,22 @@ summary {
 	}
 	.swiper-pagination-bullet-active {
 		background-color: $purpleColor;
+	}
+}
+// Animation
+.anim {
+	opacity: 0.1;
+	transform: translate(0px, 30px);
+	-webkit-transform: translate(0px, 30px);
+	transition:
+		opacity 0.65s ease,
+		transform 0.65s ease;
+	-webkit-transition:
+		opacity 0.65s ease,
+		-webkit-transform 0.65s ease;
+	&._watcher-view {
+		opacity: 1;
+		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
 	}
 }
