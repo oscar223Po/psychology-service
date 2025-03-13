@@ -193,8 +193,8 @@ body {
 		}
 		&--two {
 			@include adaptiveValue("width", 439, 120);
-			@include adaptiveValue("right", -115, -24);
-			@include adaptiveValue("bottom", -130, -30);
+			@include adaptiveValue("right", -115, -34);
+			@include adaptiveValue("bottom", -130, -40);
 		}
 	}
 	// .hero__container
@@ -239,9 +239,8 @@ body {
 		overflow: hidden;
 		position: relative;
 		border: 2px solid rgba(255, 255, 255, 0.95);
-		background: url("@img/hero.jpg") right top / cover no-repeat;
+		background: url("@img/hero/hero.jpg") right top / cover no-repeat;
 		@include adaptiveValue("border-radius", 24, 18);
-		@include adaptiveValue("background-position-x", 0, -150, 2, 767.98, 479.98);
 		@include adaptiveValue("padding-top", 92, 36, 2, 1920, 1024);
 		@include adaptiveValue("padding-left", 80, 30, 2, 1920, 1024);
 		@include adaptiveValue("padding-right", 80, 30, 2, 1920, 1024);
@@ -252,6 +251,9 @@ body {
 			@include adaptiveValue("padding-right", 30, 16, 0, 1024, 320);
 			@include adaptiveValue("padding-bottom", 36, 24, 0, 1024, 320);
 		}
+		@media (max-width: $mobile) {
+			background: url("@img/hero/hero-mob.jpg") right top / cover no-repeat;
+		}
 		&::before {
 			top: 0;
 			left: 0;
@@ -259,23 +261,22 @@ body {
 			width: 100%;
 			height: 100%;
 			position: absolute;
-			background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 212, 255, 0) 100%);
+			background: linear-gradient(90deg, rgba(#000, 0.45) 0%, rgba(#000, 0) 100%);
 			@media (max-width: $mobile) {
-				background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.25) 100%);
+				background: linear-gradient(90deg, rgba(#000, 0.45) 0%, rgba(#000, 0.1) 100%);
 			}
 		}
-		@media (max-width: $mobileSmall) {
-			background: url("@img/hero.jpg") right top / cover no-repeat;
-			@include adaptiveValue("background-position-x", -150, -280, 2, 479.98, 320);
+		@media (max-width: toEm(589.98)) {
+			@include adaptiveValue("background-position-x", 0, -20, 2, 589.98, 445);
+		}
+		@media (max-width: toEm(445)) {
+			@include adaptiveValue("background-position-x", -20, -100, 0, 445, 320);
 		}
 	}
 	// .hero__inner
 	&__inner {
 		z-index: 1;
 		position: relative;
-		@media (max-width: $mobileSmall) {
-			@include adaptiveValue("max-width", 280, 210, 0, 479.98, 320);
-		}
 	}
 	// .hero__heading
 	&__heading {
@@ -286,10 +287,13 @@ body {
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("gap", 24, 12, 0, 1024, 320);
 		}
+		@media (max-width: $mobileSmall) {
+			@include adaptiveValue("max-width", 280, 190, 0, 479.98, 320);
+		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 56, 28, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("margin-bottom", 28, 16, 0, 1024, 320);
+				@include adaptiveValue("margin-bottom", 28, 14, 0, 1024, 320);
 			}
 		}
 	}
@@ -302,7 +306,10 @@ body {
 			line-height: 125%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 24, 14, 0, 1024, 320);
+			@include adaptiveValue("font-size", 24, 16, 2, 1024, 375);
+		}
+		@media (max-width: toEm(375)) {
+			@include adaptiveValue("font-size", 16, 14, 0, 375, 320);
 		}
 	}
 	// .hero__text
@@ -313,29 +320,25 @@ body {
 			line-height: 133%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 18, 12, 0, 1024, 320);
+			@include adaptiveValue("font-size", 18, 12, 0, 1024, 375);
 		}
 	}
 	// .hero__button
 	&__button {
 		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 10, 0, 1024, 320);
+			@include adaptiveValue("font-size", 16, 11, 0, 1024, 320);
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 56, 28, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("margin-bottom", 28, 16, 0, 1024, 320);
+				@include adaptiveValue("margin-bottom", 28, 14, 0, 1024, 320);
 			}
 		}
 		&.button--yellow {
 			@include adaptiveValue("min-height", 80, 54, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("min-height", 54, 32, 0, 1024, 320);
-			}
-			@media (max-width: $mobileSmall) {
-				padding: 0;
-				width: 100%;
+				@include adaptiveValue("min-height", 54, 36, 0, 1024, 320);
 			}
 		}
 	}
@@ -349,7 +352,10 @@ body {
 			line-height: 125%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+			@include adaptiveValue("font-size", 16, 11, 0, 1024, 320);
+		}
+		@media (max-width: $mobileSmall) {
+			@include adaptiveValue("max-width", 280, 210, 0, 479.98, 320);
 		}
 	}
 }
