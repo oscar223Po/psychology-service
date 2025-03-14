@@ -1,12 +1,5 @@
 (() => {
     "use strict";
-    function addLoadedClass() {
-        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
-            setTimeout((function() {
-                document.documentElement.classList.add("loaded");
-            }), 0);
-        }));
-    }
     function ssr_window_esm_isObject(obj) {
         return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
     }
@@ -3597,6 +3590,5 @@
         }
     }), 0);
     window["FLS"] = false;
-    addLoadedClass();
     headerScroll();
 })();
