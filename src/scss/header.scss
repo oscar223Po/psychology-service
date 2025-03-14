@@ -7,6 +7,7 @@
 	transition:
 		background-color 0.5s,
 		box-shadow 0.5s;
+	/* 
 	&::before {
 		top: 0;
 		left: 0;
@@ -24,6 +25,7 @@
 			backdrop-filter: blur(20px);
 		}
 	}
+	*/
 	&._header-scroll {
 		box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 		&::before {

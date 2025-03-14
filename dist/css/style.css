@@ -323,25 +323,6 @@ summary::marker {
   overflow: hidden;
   transition: background-color .5s,box-shadow .5s
 }
-.header::before {
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-  transition: opacity .5s
-}
-@supports (backdrop-filter:blur(20px)) {
-  .header::before {
-    background: rgba(225,225,225,.65);
-    backdrop-filter: blur(20px)
-  }
-}
 .header._header-scroll {
   box-shadow: rgba(17,17,26,.1) 0 1px 0
 }
