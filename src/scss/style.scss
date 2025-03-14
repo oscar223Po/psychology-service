@@ -41,7 +41,7 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1660;
+$maxWidthContainer: 1660; // 1660
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 10;
@@ -116,6 +116,7 @@ body {
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
+			// @include adaptiveValue("max-width", 1670, 940, 0, 1920, 1024);
 			margin: 0 auto;
 		}
 		@if ($containerPadding>0) {
@@ -556,6 +557,7 @@ body {
 	background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
 	@include adaptiveValue("padding", 24, 12);
 	@include adaptiveValue("border-radius", 24, 16);
+	/*
 	@media (min-width: $mobile) {
 		&:first-child {
 			opacity: 0.1;
@@ -606,6 +608,7 @@ body {
 			-webkit-transform: translate(0px, 0px);
 		}
 	}
+	*/
 	// .item-product__inner
 	&__inner {
 		height: 100%;

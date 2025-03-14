@@ -91,52 +91,62 @@ summary {
 	@include adaptiveValue("min-width", 100, 40);
 	@include adaptiveValue("border-radius", 24, 12);
 	&--dollar {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 34, 14);
 		}
 	}
 	&--psycol {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 47, 20);
 		}
 	}
 	&--clock {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 54, 21);
 		}
 	}
 	&--idea {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 48, 18);
 		}
 	}
 	&--play {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 56, 22);
 		}
 	}
 	&--smile {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 56, 22);
 		}
 	}
 	&--down {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 52, 24);
 		}
 	}
 	&--fire {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 50, 18);
 		}
 	}
 	&--refresh {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 50, 18);
 		}
 	}
 	&--users {
-		svg {
+		svg,
+		img {
 			@include adaptiveValue("width", 56, 24);
 		}
 	}
@@ -149,20 +159,6 @@ summary {
 }
 // Title
 .title {
-	opacity: 0.1;
-	transform: translate(0px, 30px);
-	-webkit-transform: translate(0px, 30px);
-	transition:
-		opacity 0.65s ease,
-		transform 0.65s ease;
-	-webkit-transition:
-		opacity 0.65s ease,
-		-webkit-transform 0.65s ease;
-	&._watcher-view {
-		opacity: 1;
-		transform: translate(0px, 0px);
-		-webkit-transform: translate(0px, 0px);
-	}
 	font-weight: 600;
 	line-height: 117%;
 	@include adaptiveValue("font-size", 48, 20);
@@ -345,6 +341,7 @@ summary {
 		background-color: $purpleColor;
 	}
 }
+/*
 // Animation
 .anim {
 	opacity: 0.1;
@@ -362,3 +359,8 @@ summary {
 		-webkit-transform: translate(0px, 0px);
 	}
 }
+	<div data-watch data-watch-once class="hero__body shad anim">
+	<h3 data-watch data-watch-once class="how__title title">Узнаёте себя?</h3>
+	<div data-watch data-watch-once class="how__block block-how back-blure shad anim">
+	<div data-watch data-watch-once class="how__label text text--large anim">И даже всё это не гарантирует результат и решение Вашего запроса</div>
+*/
