@@ -318,9 +318,9 @@ summary::marker {
   opacity: 0;
   -webkit-transform: translate(0,15%);
   transform: translate(0,15%);
-  transition: opacity .7s 0s,-webkit-transform .7s 0s;
-  transition: transform .7s 0s,opacity .7s 0s;
-  transition: transform .7s 0s,opacity .7s 0s,-webkit-transform .7s 0s
+  transition: opacity .7s ease 0s,-webkit-transform .7s ease 0s;
+  transition: transform .7s ease 0s,opacity .7s ease 0s;
+  transition: transform .7s ease 0s,opacity .7s ease 0s,-webkit-transform .7s ease 0s
 }
 ._watcher-view .anim {
   opacity: 1;
@@ -393,9 +393,7 @@ summary::marker {
   margin: 0 auto;
   position: absolute;
   border-radius: 50%;
-  background-color: #8380d1;
-  -webkit-filter: blur(279.6000061035px);
-  filter: blur(279.6000061035px)
+  background-color: #8380d1
 }
 .footer::before {
   left: 0;
@@ -463,15 +461,11 @@ summary::marker {
 .hero__container::before {
   top: 0;
   right: 0;
-  -webkit-filter: blur(190px);
-  filter: blur(190px);
   -webkit-transform: translate(50%,-50%);
   transform: translate(50%,-50%)
 }
 .hero__container::after {
   bottom: 0;
-  -webkit-filter: blur(340px);
-  filter: blur(340px);
   -webkit-transform: translate(-65%,20%) rotate(45deg);
   transform: translate(-65%,20%) rotate(45deg)
 }
@@ -533,8 +527,6 @@ summary::marker {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  -webkit-filter: blur(190px);
-  filter: blur(190px);
   background-color: #8380d1
 }
 .how__container::before {
@@ -567,8 +559,6 @@ summary::marker {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  -webkit-filter: blur(340px);
-  filter: blur(340px);
   background-color: #8380d1;
   -webkit-transform: translate(-65%,20%) rotate(45deg);
   transform: translate(-65%,20%) rotate(45deg)
@@ -605,8 +595,6 @@ summary::marker {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  -webkit-filter: blur(190px);
-  filter: blur(190px);
   background-color: #8380d1;
   -webkit-transform: translate(75%,-50%) rotate(45deg);
   transform: translate(75%,-50%) rotate(45deg)
@@ -665,8 +653,6 @@ summary::marker {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  -webkit-filter: blur(190px);
-  filter: blur(190px);
   background-color: #8380d1
 }
 .compare__container::before {
@@ -748,15 +734,11 @@ summary::marker {
 .case__container::before {
   right: 0;
   bottom: 0;
-  -webkit-filter: blur(190px);
-  filter: blur(190px);
   -webkit-transform: translate(60%,20%);
   transform: translate(60%,20%)
 }
 .case__container::after {
-  top: 0;
-  -webkit-filter: blur(230px);
-  filter: blur(230px)
+  top: 0
 }
 .case__head {
   display: flex;
@@ -777,8 +759,6 @@ summary::marker {
   z-index: -1;
   border-radius: 50%;
   position: absolute;
-  -webkit-filter: blur(290px);
-  filter: blur(290px);
   background-color: #8380d1;
   -webkit-transform: translate(-60%,-100%);
   transform: translate(-60%,-100%)
@@ -1970,12 +1950,6 @@ summary::marker {
     max-width: 12.5rem
   }
 }
-@media (max-width:61.99875em) {
-  .chose__container::before {
-    -webkit-filter: blur(190px);
-    filter: blur(190px)
-  }
-}
 @media (max-width:47.99875em) {
   .controls {
     display: none
@@ -1983,9 +1957,7 @@ summary::marker {
   .footer::after {
     top: 0;
     -webkit-transform: translate(0,-50%);
-    transform: translate(0,-50%);
-    -webkit-filter: blur(209.6000061035px);
-    filter: blur(209.6000061035px)
+    transform: translate(0,-50%)
   }
   .footer__actions {
     flex-direction: column
@@ -1994,8 +1966,6 @@ summary::marker {
     display: none
   }
   .hero__container::before {
-    -webkit-filter: blur(110px);
-    filter: blur(110px);
     -webkit-transform: translate(40%,-65%);
     transform: translate(40%,-65%)
   }
@@ -2014,11 +1984,6 @@ summary::marker {
   .hero__blockquote {
     line-height: 125%
   }
-  .how__container::after,
-  .how__container::before {
-    -webkit-filter: blur(110px);
-    filter: blur(110px)
-  }
   .how__container::before {
     display: none
   }
@@ -2028,21 +1993,12 @@ summary::marker {
     transform: translate(35%,30%)
   }
   .our__container::before {
-    -webkit-filter: blur(110px);
-    filter: blur(110px);
     -webkit-transform: translate(-65%,-100%) rotate(45deg);
     transform: translate(-65%,-100%) rotate(45deg)
   }
   .product__container::before {
-    -webkit-filter: blur(110px);
-    filter: blur(110px);
     -webkit-transform: translate(40%,-5%) rotate(0);
     transform: translate(40%,-5%) rotate(0)
-  }
-  .compare__container::after,
-  .compare__container::before {
-    -webkit-filter: blur(170px);
-    filter: blur(170px)
   }
   .compare__container::after {
     display: none
@@ -2053,11 +2009,6 @@ summary::marker {
   }
   .compare__label:first-child::before {
     border: .2px solid #8380d1
-  }
-  .case__container::after,
-  .case__container::before {
-    -webkit-filter: blur(120px);
-    filter: blur(120px)
   }
   .case__container::before {
     display: none
@@ -2080,23 +2031,13 @@ summary::marker {
   .dotts .swiper-pagination-bullet {
     border: .2px solid #8380d1
   }
-  .footer::after {
-    -webkit-filter: blur(65.6999969482px);
-    filter: blur(65.6999969482px)
-  }
   .footer {
     border-top: 1px solid rgba(255,255,255,.15)
-  }
-  .hero__container::before {
-    -webkit-filter: blur(80px);
-    filter: blur(80px)
   }
   .compare__item:not(:last-child) .compare__label {
     border-bottom: 1px solid rgba(43,42,48,.1)
   }
   .chose__container::before {
-    -webkit-filter: blur(150px);
-    filter: blur(150px);
     -webkit-transform: translate(-60%,-10%);
     transform: translate(-60%,-10%)
   }

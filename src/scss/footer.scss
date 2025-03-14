@@ -19,9 +19,8 @@
 		position: absolute;
 		border-radius: 50%;
 		background-color: $purpleColor;
-		filter: blur(279.6000061035156px);
+		// filter: blur(279.6000061035156px);
 		@include adaptiveValue("height", 290, 75);
-		// @include adaptiveValue("width", 2200, 320);
 		@media (min-width: $mobile) {
 			bottom: 0;
 			transform: translate(0px, 50%);
@@ -29,10 +28,10 @@
 		@media (max-width: $mobile) {
 			top: 0;
 			transform: translate(0px, -50%);
-			filter: blur(209.6000061035156px);
+			// filter: blur(209.6000061035156px);
 		}
 		@media (max-width: $mobileSmall) {
-			filter: blur(65.69999694824219px);
+			// filter: blur(65.69999694824219px);
 		}
 	}
 	&::before {
@@ -42,7 +41,6 @@
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		// filter: blur(50px);
 		background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
 	}
 	@media (max-width: $mobileSmall) {
