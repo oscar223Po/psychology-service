@@ -80,6 +80,10 @@ body {
   -ms-scroll-chaining: none;
   overscroll-behavior: none
 }
+.loaded body {
+  opacity: 1;
+  transition: opacity .5s ease 0s
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -322,7 +326,7 @@ summary::marker {
   transition: transform .7s ease 0s,opacity .7s ease 0s;
   transition: transform .7s ease 0s,opacity .7s ease 0s,-webkit-transform .7s ease 0s
 }
-._watcher-view .anim {
+.anim._watcher-view {
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0)
