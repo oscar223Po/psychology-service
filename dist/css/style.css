@@ -314,6 +314,20 @@ summary::marker {
 .dotts .swiper-pagination-bullet-active {
   background-color: #8380d1
 }
+.anim {
+  opacity: .1;
+  transform: translate(0,30px);
+  -webkit-transform: translate(0,30px);
+  transition: opacity .65s ease,-webkit-transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease;
+  transition: opacity .65s ease,transform .65s ease,-webkit-transform .65s ease;
+  -webkit-transition: opacity .65s ease,-webkit-transform .65s ease
+}
+.anim._watcher-view {
+  opacity: 1;
+  transform: translate(0,0);
+  -webkit-transform: translate(0,0)
+}
 .header {
   width: 100%;
   z-index: 10;
