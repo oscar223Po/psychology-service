@@ -215,27 +215,27 @@ body {
 			right: 0;
 			filter: blur(190px);
 			-webkit-backdrop-filter: blur(190px);
-			backdrop-filter: blur(190px);
+			// backdrop-filter: blur(190px);
 			transform: translate(50%, -50%);
 			@include adaptiveValue("width", 800, 300);
 			@include adaptiveValue("height", 450, 150);
 			@media (max-width: $mobile) {
 				filter: blur(110px);
 				-webkit-backdrop-filter: blur(110px);
-				backdrop-filter: blur(110px);
+				// backdrop-filter: blur(110px);
 				transform: translate(40%, -65%);
 			}
 			@media (max-width: $mobileSmall) {
 				filter: blur(80px);
 				-webkit-backdrop-filter: blur(80px);
-				backdrop-filter: blur(80px);
+				// backdrop-filter: blur(80px);
 			}
 		}
 		&::after {
 			bottom: 0;
 			filter: blur(340px);
 			-webkit-backdrop-filter: blur(340px);
-			backdrop-filter: blur(340px);
+			// backdrop-filter: blur(340px);
 			transform: translate(-65%, 20%) rotate(45deg);
 			@include adaptiveValue("width", 780, 300);
 			@include adaptiveValue("height", 530, 150);
@@ -395,14 +395,14 @@ body {
 			position: absolute;
 			filter: blur(190px);
 			-webkit-backdrop-filter: blur(190px);
-			backdrop-filter: blur(190px);
+			// backdrop-filter: blur(190px);
 			background-color: $purpleColor;
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
 				filter: blur(110px);
 				-webkit-backdrop-filter: blur(110px);
-				backdrop-filter: blur(110px);
+				// backdrop-filter: blur(110px);
 			}
 		}
 		&::before {
@@ -463,7 +463,7 @@ body {
 			position: absolute;
 			filter: blur(340px);
 			-webkit-backdrop-filter: blur(340px);
-			backdrop-filter: blur(340px);
+			// backdrop-filter: blur(340px);
 			background-color: $purpleColor;
 			transform: translate(-65%, 20%) rotate(45deg);
 			@include adaptiveValue("width", 780, 300);
@@ -471,7 +471,7 @@ body {
 			@media (max-width: $mobile) {
 				filter: blur(110px);
 				-webkit-backdrop-filter: blur(110px);
-				backdrop-filter: blur(110px);
+				// backdrop-filter: blur(110px);
 				transform: translate(-65%, -100%) rotate(45deg);
 			}
 		}
@@ -544,7 +544,7 @@ body {
 			position: absolute;
 			filter: blur(190px);
 			-webkit-backdrop-filter: blur(190px);
-			backdrop-filter: blur(190px);
+			// backdrop-filter: blur(190px);
 			background-color: $purpleColor;
 			transform: translate(75%, -50%) rotate(45deg);
 			@include adaptiveValue("width", 600, 300);
@@ -552,7 +552,7 @@ body {
 			@media (max-width: $mobile) {
 				filter: blur(110px);
 				-webkit-backdrop-filter: blur(110px);
-				backdrop-filter: blur(110px);
+				// backdrop-filter: blur(110px);
 				transform: translate(40%, -5%) rotate(0deg);
 			}
 		}
@@ -664,14 +664,14 @@ body {
 			position: absolute;
 			filter: blur(190px);
 			-webkit-backdrop-filter: blur(190px);
-			backdrop-filter: blur(190px);
+			// backdrop-filter: blur(190px);
 			background-color: $purpleColor;
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
 				filter: blur(170px);
 				-webkit-backdrop-filter: blur(170px);
-				backdrop-filter: blur(170px);
+				// backdrop-filter: blur(170px);
 			}
 		}
 		&::before {
@@ -824,7 +824,7 @@ body {
 			@media (max-width: $mobile) {
 				filter: blur(120px);
 				-webkit-backdrop-filter: blur(120px);
-				backdrop-filter: blur(120px);
+				// backdrop-filter: blur(120px);
 			}
 		}
 		&::before {
@@ -832,7 +832,7 @@ body {
 			bottom: 0;
 			filter: blur(190px);
 			-webkit-backdrop-filter: blur(190px);
-			backdrop-filter: blur(190px);
+			// backdrop-filter: blur(190px);
 			transform: translate(60%, 20%);
 			@media (max-width: $mobile) {
 				display: none;
@@ -842,7 +842,7 @@ body {
 			top: 0;
 			filter: blur(230px);
 			-webkit-backdrop-filter: blur(230px);
-			backdrop-filter: blur(230px);
+			// backdrop-filter: blur(230px);
 			@media (min-width: $mobile) {
 				left: 0;
 				transform: translate(-60%, -10%);
@@ -887,7 +887,7 @@ body {
 			position: absolute;
 			filter: blur(290px);
 			-webkit-backdrop-filter: blur(290px);
-			backdrop-filter: blur(290px);
+			// backdrop-filter: blur(290px);
 			background-color: $purpleColor;
 			transform: translate(-60%, -100%);
 			@include adaptiveValue("width", 600, 300);
@@ -895,13 +895,12 @@ body {
 			@media (max-width: $tablet) {
 				filter: blur(190px);
 				-webkit-backdrop-filter: blur(190px);
-				backdrop-filter: blur(190px);
+				// backdrop-filter: blur(190px);
 			}
 			@media (max-width: $mobileSmall) {
 				filter: blur(150px);
 				-webkit-backdrop-filter: blur(150px);
-				backdrop-filter: blur(150px);
-
+				// backdrop-filter: blur(150px);
 				transform: translate(-60%, -10%);
 			}
 		}
