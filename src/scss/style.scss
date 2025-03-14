@@ -213,21 +213,21 @@ body {
 		&::before {
 			top: 0;
 			right: 0;
-			filter: blur(190px);
+			// filter: blur(190px);
 			transform: translate(50%, -50%);
 			@include adaptiveValue("width", 800, 300);
 			@include adaptiveValue("height", 450, 150);
 			@media (max-width: $mobile) {
-				filter: blur(110px);
+				// filter: blur(110px);
 				transform: translate(40%, -65%);
 			}
 			@media (max-width: $mobileSmall) {
-				filter: blur(80px);
+				// filter: blur(80px);
 			}
 		}
 		&::after {
 			bottom: 0;
-			filter: blur(340px);
+			// filter: blur(340px);
 			transform: translate(-65%, 20%) rotate(45deg);
 			@include adaptiveValue("width", 780, 300);
 			@include adaptiveValue("height", 530, 150);
@@ -385,12 +385,12 @@ body {
 			z-index: -1;
 			border-radius: 50%;
 			position: absolute;
-			filter: blur(190px);
+			// filter: blur(190px);
 			background-color: $purpleColor;
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
-				filter: blur(110px);
+				// filter: blur(110px);
 			}
 		}
 		&::before {
@@ -449,13 +449,13 @@ body {
 			z-index: -1;
 			border-radius: 50%;
 			position: absolute;
-			filter: blur(340px);
+			// filter: blur(340px);
 			background-color: $purpleColor;
 			transform: translate(-65%, 20%) rotate(45deg);
 			@include adaptiveValue("width", 780, 300);
 			@include adaptiveValue("height", 530, 150);
 			@media (max-width: $mobile) {
-				filter: blur(110px);
+				// filter: blur(110px);
 				transform: translate(-65%, -100%) rotate(45deg);
 			}
 		}
@@ -526,13 +526,13 @@ body {
 			z-index: -1;
 			border-radius: 50%;
 			position: absolute;
-			filter: blur(190px);
+			// filter: blur(190px);
 			background-color: $purpleColor;
 			transform: translate(75%, -50%) rotate(45deg);
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
-				filter: blur(110px);
+				// filter: blur(110px);
 				transform: translate(40%, -5%) rotate(0deg);
 			}
 		}
@@ -694,12 +694,12 @@ body {
 			z-index: -1;
 			border-radius: 50%;
 			position: absolute;
-			filter: blur(190px);
+			// filter: blur(190px);
 			background-color: $purpleColor;
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
-				filter: blur(170px);
+				// filter: blur(170px);
 			}
 		}
 		&::before {
@@ -850,13 +850,13 @@ body {
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $mobile) {
-				filter: blur(120px);
+				// filter: blur(120px);
 			}
 		}
 		&::before {
 			right: 0;
 			bottom: 0;
-			filter: blur(190px);
+			// filter: blur(190px);
 			transform: translate(60%, 20%);
 			@media (max-width: $mobile) {
 				display: none;
@@ -864,7 +864,7 @@ body {
 		}
 		&::after {
 			top: 0;
-			filter: blur(230px);
+			// filter: blur(230px);
 			@media (min-width: $mobile) {
 				left: 0;
 				transform: translate(-60%, -10%);
@@ -907,16 +907,16 @@ body {
 			z-index: -1;
 			border-radius: 50%;
 			position: absolute;
-			filter: blur(290px);
+			// filter: blur(290px);
 			background-color: $purpleColor;
 			transform: translate(-60%, -100%);
 			@include adaptiveValue("width", 600, 300);
 			@include adaptiveValue("height", 400, 200);
 			@media (max-width: $tablet) {
-				filter: blur(190px);
+				// filter: blur(190px);
 			}
 			@media (max-width: $mobileSmall) {
-				filter: blur(150px);
+				// filter: blur(150px);
 				transform: translate(-60%, -10%);
 			}
 		}
