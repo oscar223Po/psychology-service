@@ -806,6 +806,9 @@ summary::marker {
   display: flex;
   align-items: center
 }
+.main-chose__label {
+  font-weight: 600
+}
 .main-chose__button {
   display: flex;
   justify-content: center
@@ -1023,12 +1026,6 @@ summary::marker {
   .item-product__bottom {
     gap: 1.5rem
   }
-  .item-product__items {
-    margin-top: 2.375rem
-  }
-  .item-product__items {
-    padding-top: 2.375rem
-  }
   .compare__container::after,
   .compare__container::before {
     width: 37.5rem
@@ -1040,12 +1037,6 @@ summary::marker {
   .compare__head {
     gap: 1.5rem
   }
-  .compare__subtitle {
-    padding: 1rem
-  }
-  .compare__subtitle {
-    border-radius: 1rem
-  }
   .compare__items {
     gap: 1rem
   }
@@ -1054,18 +1045,6 @@ summary::marker {
   }
   .compare__label {
     gap: 1rem
-  }
-  .compare__label {
-    padding-top: 1.125rem
-  }
-  .compare__label {
-    padding-bottom: 1.125rem
-  }
-  .compare__label {
-    padding-left: 1.125rem
-  }
-  .compare__label {
-    padding-right: 1.125rem
   }
   .compare__label::before {
     height: .875rem
@@ -1356,6 +1335,12 @@ summary::marker {
     font-size: 2rem
   }
   .item-product__items {
+    margin-top: 2.375rem
+  }
+  .item-product__items {
+    padding-top: 2.375rem
+  }
+  .item-product__items {
     gap: 1.5rem
   }
   .item-product__item {
@@ -1368,7 +1353,25 @@ summary::marker {
     margin-bottom: 1.5rem
   }
   .compare__subtitle {
+    padding: 1rem
+  }
+  .compare__subtitle {
     font-size: 2rem
+  }
+  .compare__subtitle {
+    border-radius: 1rem
+  }
+  .compare__label {
+    padding-top: 1.125rem
+  }
+  .compare__label {
+    padding-bottom: 1.125rem
+  }
+  .compare__label {
+    padding-left: 1.125rem
+  }
+  .compare__label {
+    padding-right: 1.125rem
   }
   .compare__label {
     font-size: 2rem
@@ -1506,13 +1509,22 @@ summary::marker {
     border-radius: 1.125rem
   }
   .our__body {
-    max-width: 45rem
+    max-width: 47.9375rem
   }
   .item-product__title {
     font-size: 1rem
   }
   .item-product__title:not(:last-child) {
     margin-bottom: 1rem
+  }
+  .item-product__price {
+    font-size: 1rem
+  }
+  .item-product__items {
+    margin-top: 1.375rem
+  }
+  .item-product__items {
+    padding-top: 1.375rem
   }
   .item-product__items {
     gap: 1rem
@@ -1522,6 +1534,12 @@ summary::marker {
   }
   .compare__head:not(:last-child) {
     margin-bottom: .75rem
+  }
+  .compare__subtitle {
+    padding: .5rem
+  }
+  .compare__subtitle {
+    border-radius: .75rem
   }
   .main-chose__items {
     gap: 1.25rem
@@ -1681,9 +1699,6 @@ summary::marker {
   }
   .item-product__list {
     padding-left: 1.25rem
-  }
-  .item-product__price {
-    font-size: 1rem
   }
   .compare__body {
     padding: .5rem
@@ -1863,12 +1878,6 @@ summary::marker {
   .item-product__bottom {
     gap: 1rem
   }
-  .item-product__items {
-    margin-top: 1.375rem
-  }
-  .item-product__items {
-    padding-top: 1.375rem
-  }
   .compare__container::after,
   .compare__container::before {
     width: 18.75rem
@@ -1880,12 +1889,6 @@ summary::marker {
   .compare__head {
     gap: .4375rem
   }
-  .compare__subtitle {
-    padding: .5rem
-  }
-  .compare__subtitle {
-    border-radius: .75rem
-  }
   .compare__items {
     gap: .5rem
   }
@@ -1894,18 +1897,6 @@ summary::marker {
   }
   .compare__label {
     gap: .25rem
-  }
-  .compare__label {
-    padding-top: .25rem
-  }
-  .compare__label {
-    padding-bottom: .25rem
-  }
-  .compare__label {
-    padding-left: .25rem
-  }
-  .compare__label {
-    padding-right: .25rem
   }
   .compare__label::before {
     height: .25rem
@@ -2316,7 +2307,7 @@ summary::marker {
     gap: clamp(.75rem ,.25rem + .78125vw ,1.5rem)
   }
   .our__body {
-    max-width: clamp(45rem ,26.6666666667rem + 28.6458333333vw ,72.5rem)
+    max-width: clamp(38.75rem ,16.25rem + 35.15625vw ,72.5rem)
   }
   .block-our {
     padding: clamp(1.25rem ,.4166666667rem + 1.3020833333vw ,2.5rem)
@@ -2340,7 +2331,13 @@ summary::marker {
     padding-left: clamp(1.625rem ,1.0416666667rem + .9114583333vw ,2.5rem)
   }
   .item-product__price {
-    font-size: clamp(1.25rem ,.75rem + .78125vw ,2rem)
+    font-size: clamp(1rem ,.3333333333rem + 1.0416666667vw ,2rem)
+  }
+  .item-product__items {
+    margin-top: clamp(1.375rem ,.7083333333rem + 1.0416666667vw ,2.375rem)
+  }
+  .item-product__items {
+    padding-top: clamp(1.375rem ,.7083333333rem + 1.0416666667vw ,2.375rem)
   }
   .item-product__items {
     gap: clamp(1rem ,.6666666667rem + .5208333333vw ,1.5rem)
@@ -2349,13 +2346,31 @@ summary::marker {
     gap: clamp(.75rem ,.25rem + .78125vw ,1.5rem)
   }
   .compare__body {
-    padding: clamp(1rem ,.0000000625rem + 1.5625vw ,2.5rem)
+    padding: clamp(.875rem ,-.2083333333rem + 1.6927083333vw ,2.5rem)
   }
   .compare__head:not(:last-child) {
     margin-bottom: clamp(.75rem ,.25rem + .78125vw ,1.5rem)
   }
   .compare__subtitle {
-    font-size: clamp(.875rem ,.125rem + 1.171875vw ,2rem)
+    padding: clamp(.5rem ,.1666666667rem + .5208333333vw ,1rem)
+  }
+  .compare__subtitle {
+    font-size: clamp(.75rem ,-.0833333333rem + 1.3020833333vw ,2rem)
+  }
+  .compare__subtitle {
+    border-radius: clamp(.75rem ,.5833333333rem + .2604166667vw ,1rem)
+  }
+  .compare__label {
+    padding-top: clamp(.5rem ,.0833333333rem + .6510416667vw ,1.125rem)
+  }
+  .compare__label {
+    padding-bottom: clamp(.5rem ,.0833333333rem + .6510416667vw ,1.125rem)
+  }
+  .compare__label {
+    padding-left: clamp(.5rem ,.0833333333rem + .6510416667vw ,1.125rem)
+  }
+  .compare__label {
+    padding-right: clamp(.5rem ,.0833333333rem + .6510416667vw ,1.125rem)
   }
   .compare__label {
     font-size: clamp(.875rem ,.125rem + 1.171875vw ,2rem)
@@ -2535,12 +2550,6 @@ summary::marker {
   .item-product__bottom {
     gap: clamp(1rem ,.8814814815rem + .5925925926vw ,1.5rem)
   }
-  .item-product__items {
-    margin-top: clamp(1.375rem ,1.137962963rem + 1.1851851852vw ,2.375rem)
-  }
-  .item-product__items {
-    padding-top: clamp(1.375rem ,1.137962963rem + 1.1851851852vw ,2.375rem)
-  }
   .compare__container::after,
   .compare__container::before {
     width: clamp(18.75rem ,14.3055555556rem + 22.2222222222vw ,37.5rem)
@@ -2552,12 +2561,6 @@ summary::marker {
   .compare__head {
     gap: clamp(.4375rem ,.1856481481rem + 1.2592592593vw ,1.5rem)
   }
-  .compare__subtitle {
-    padding: clamp(.5rem ,.3814814815rem + .5925925926vw ,1rem)
-  }
-  .compare__subtitle {
-    border-radius: clamp(.75rem ,.6907407407rem + .2962962963vw ,1rem)
-  }
   .compare__items {
     gap: clamp(.5rem ,.3814814815rem + .5925925926vw ,1rem)
   }
@@ -2566,18 +2569,6 @@ summary::marker {
   }
   .compare__label {
     gap: clamp(.25rem ,.0722222222rem + .8888888889vw ,1rem)
-  }
-  .compare__label {
-    padding-top: clamp(.25rem ,.0425925926rem + 1.037037037vw ,1.125rem)
-  }
-  .compare__label {
-    padding-bottom: clamp(.25rem ,.0425925926rem + 1.037037037vw ,1.125rem)
-  }
-  .compare__label {
-    padding-left: clamp(.25rem ,.0425925926rem + 1.037037037vw ,1.125rem)
-  }
-  .compare__label {
-    padding-right: clamp(.25rem ,.0425925926rem + 1.037037037vw ,1.125rem)
   }
   .compare__label::before {
     height: clamp(.25rem ,.1018518519rem + .7407407407vw ,.875rem)
@@ -2764,17 +2755,26 @@ summary::marker {
   .item-product__list {
     padding-left: 1.625rem
   }
-  .item-product__price {
-    font-size: 1.25rem
-  }
   .compare__body {
-    padding: 1rem
+    padding: .875rem
   }
   .compare__subtitle {
-    font-size: .875rem
+    font-size: .75rem
   }
   .compare__label {
     font-size: .875rem
+  }
+  .compare__label {
+    padding-top: .5rem
+  }
+  .compare__label {
+    padding-bottom: .5rem
+  }
+  .compare__label {
+    padding-left: .5rem
+  }
+  .compare__label {
+    padding-right: .5rem
   }
   .psych__head:not(:last-child) {
     margin-bottom: 1.75rem
@@ -2962,17 +2962,26 @@ summary::marker {
   .item-product__list {
     padding-left: clamp(1.25rem ,1.0795454545rem + .8522727273vw ,1.625rem)
   }
-  .item-product__price {
-    font-size: clamp(1rem ,.8863636364rem + .5681818182vw ,1.25rem)
-  }
   .compare__body {
-    padding: clamp(.5rem ,.2727272727rem + 1.1363636364vw ,1rem)
+    padding: clamp(.5rem ,.3295454545rem + .8522727273vw ,.875rem)
   }
   .compare__subtitle {
-    font-size: clamp(.625rem ,.5113636364rem + .5681818182vw ,.875rem)
+    font-size: clamp(.625rem ,.5681818182rem + .2840909091vw ,.75rem)
   }
   .compare__label {
     font-size: clamp(.625rem ,.5113636364rem + .5681818182vw ,.875rem)
+  }
+  .compare__label {
+    padding-top: clamp(.25rem ,.1363636364rem + .5681818182vw ,.5rem)
+  }
+  .compare__label {
+    padding-bottom: clamp(.25rem ,.1363636364rem + .5681818182vw ,.5rem)
+  }
+  .compare__label {
+    padding-left: clamp(.25rem ,.1363636364rem + .5681818182vw ,.5rem)
+  }
+  .compare__label {
+    padding-right: clamp(.25rem ,.1363636364rem + .5681818182vw ,.5rem)
   }
   .psych__head:not(:last-child) {
     margin-bottom: clamp(1.5rem ,1.3863636364rem + .5681818182vw ,1.75rem)

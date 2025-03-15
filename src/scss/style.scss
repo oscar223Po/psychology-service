@@ -41,7 +41,7 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 2560;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1660; // 1660
+$maxWidthContainer: 1660;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 10;
@@ -115,7 +115,6 @@ body {
 	// Чуйна
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
-			// max-width: toRem($containerWidth);
 			@include adaptiveValue("max-width", 1670, 840, 0, 2560, 1024);
 			margin: 0 auto;
 		}
@@ -123,7 +122,6 @@ body {
 			@if ($maxWidthContainer>0) {
 				@include adaptiveValue("padding-left", 55, 15);
 				@include adaptiveValue("padding-right", 55, 15);
-				// padding: 0 toRem(math.div($containerPadding, 2));
 			} @else {
 				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
 				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
@@ -480,7 +478,10 @@ body {
 		display: grid;
 		margin: 0 auto;
 		@include adaptiveValue("gap", 32, 24);
-		@include adaptiveValue("max-width", 1160, 720, 0, 2560, 1024);
+		@include adaptiveValue("max-width", 1160, 620, 2, 2560, 1024);
+		@media (max-width: toEm(1024)) {
+			max-width: toRem(767);
+		}
 	}
 	// .our__block
 	&__block {
@@ -632,10 +633,7 @@ body {
 		font-weight: 600;
 		line-height: 125%;
 		text-align: center;
-		@include adaptiveValue("font-size", 32, 20, 2, 2560, 1024);
-		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 20, 16, 0, 1024, 320);
-		}
+		@include adaptiveValue("font-size", 32, 16, 0, 2560, 1024);
 	}
 	// .item-product__button
 	&__button {
@@ -648,8 +646,8 @@ body {
 	&__items {
 		display: grid;
 		border-top: 1px solid rgba($purpleColor, 0.45);
-		@include adaptiveValue("margin-top", 38, 22);
-		@include adaptiveValue("padding-top", 38, 22);
+		@include adaptiveValue("margin-top", 38, 22, 0, 2560, 1024);
+		@include adaptiveValue("padding-top", 38, 22, 0, 2560, 1024);
 		@include adaptiveValue("gap", 24, 16, 0, 2560, 1024);
 	}
 	// .item-product__item
@@ -698,9 +696,9 @@ body {
 	}
 	// .compare__body
 	&__body {
-		@include adaptiveValue("padding", 40, 16, 2, 2560, 1024);
+		@include adaptiveValue("padding", 40, 14, 2, 2560, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("padding", 16, 8, 0, 1024, 320);
+			@include adaptiveValue("padding", 14, 8, 0, 1024, 320);
 		}
 	}
 	// .compare__head
@@ -718,11 +716,11 @@ body {
 		font-weight: 600;
 		line-height: 125%;
 		align-items: center;
-		@include adaptiveValue("padding", 16, 8);
-		@include adaptiveValue("border-radius", 16, 12);
-		@include adaptiveValue("font-size", 32, 14, 2, 2560, 1024);
+		@include adaptiveValue("padding", 16, 8, 0, 2560, 1024);
+		@include adaptiveValue("font-size", 32, 12, 2, 2560, 1024);
+		@include adaptiveValue("border-radius", 16, 12, 0, 2560, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 14, 10, 0, 1024, 320);
+			@include adaptiveValue("font-size", 12, 10, 0, 1024, 320);
 		}
 		&:first-child {
 			background-color: $yellowColor;
@@ -762,13 +760,17 @@ body {
 		line-height: 125%;
 		position: relative;
 		@include adaptiveValue("gap", 16, 4);
-		@include adaptiveValue("padding-top", 18, 4);
-		@include adaptiveValue("padding-bottom", 18, 4);
-		@include adaptiveValue("padding-left", 18, 4);
-		@include adaptiveValue("padding-right", 18, 4);
+		@include adaptiveValue("padding-top", 18, 8, 2, 2560, 1024);
+		@include adaptiveValue("padding-bottom", 18, 8, 2, 2560, 1024);
+		@include adaptiveValue("padding-left", 18, 8, 2, 2560, 1024);
+		@include adaptiveValue("padding-right", 18, 8, 2, 2560, 1024);
 		@include adaptiveValue("font-size", 32, 14, 2, 2560, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("font-size", 14, 10, 0, 1024, 320);
+			@include adaptiveValue("padding-top", 8, 4, 2, 1024, 320);
+			@include adaptiveValue("padding-bottom", 8, 4, 2, 1024, 320);
+			@include adaptiveValue("padding-left", 8, 4, 2, 1024, 320);
+			@include adaptiveValue("padding-right", 8, 4, 2, 1024, 320);
 		}
 		&::before {
 			content: "";
@@ -988,6 +990,7 @@ body {
 	}
 	// .main-chose__label
 	&__label {
+		font-weight: 600;
 	}
 	// .main-chose__button
 	&__button {
