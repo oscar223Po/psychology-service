@@ -39,12 +39,12 @@
 		padding-bottom: toRem(10);
 		transition: min-height 0.5s;
 		justify-content: space-between;
-		@include adaptiveValue("min-height", 112, 72, 2, 1920, 1024);
+		@include adaptiveValue("min-height", 112, 72, 2, 2160, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("min-height", 72, 56, 0, 1024, 320);
 		}
 		._header-scroll & {
-			@include adaptiveValue("min-height", 92, 52, 2, 1920, 1024);
+			@include adaptiveValue("min-height", 92, 52, 2, 2160, 1024);
 			@media (max-width: toEm(1024)) {
 				@include adaptiveValue("min-height", 52, 46, 0, 1024, 320);
 			}
@@ -54,7 +54,7 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 40, 22, 2, 1920, 1024);
+		@include adaptiveValue("gap", 40, 22, 2, 2160, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("gap", 22, 16, 0, 1024, 320);
 		}
@@ -63,7 +63,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		@include adaptiveValue("gap", 24, 14, 2, 1920, 1024);
+		@include adaptiveValue("gap", 24, 14, 2, 2160, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("gap", 14, 8, 0, 1024, 320);
 		}
@@ -71,8 +71,8 @@
 	// .header__social
 	&__social {
 		svg {
-			@include adaptiveValue("width", 64, 40, 2, 1920, 1024);
-			@include adaptiveValue("height", 64, 40, 2, 1920, 1024);
+			@include adaptiveValue("width", 64, 40, 2, 2160, 1024);
+			@include adaptiveValue("height", 64, 40, 2, 2160, 1024);
 			@media (max-width: toEm(1024)) {
 				@include adaptiveValue("width", 40, 24, 0, 1024, 320);
 				@include adaptiveValue("height", 40, 24, 0, 1024, 320);

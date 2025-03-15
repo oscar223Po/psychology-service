@@ -30,7 +30,7 @@
 		@include adaptiveValue("padding-left", 48, 16);
 		@include adaptiveValue("border-radius", 40, 32);
 		@include adaptiveValue("padding-right", 48, 16);
-		@include adaptiveValue("min-height", 80, 48, 2, 1920, 1024);
+		@include adaptiveValue("min-height", 80, 48, 2, 2160, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("min-height", 48, 38, 0, 1024, 320);
 		}
