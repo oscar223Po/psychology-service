@@ -27,10 +27,13 @@
 			rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
 			rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
 			rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-		@include adaptiveValue("min-height", 80, 38);
 		@include adaptiveValue("padding-left", 48, 16);
 		@include adaptiveValue("border-radius", 40, 32);
 		@include adaptiveValue("padding-right", 48, 16);
+		@include adaptiveValue("min-height", 80, 48, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("min-height", 48, 38, 0, 1024, 320);
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				background: #b7ed18;

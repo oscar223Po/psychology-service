@@ -29,16 +29,36 @@ summary {
 .logo {
 	line-height: 117%;
 	transition: opacity 0.3s;
-	@include adaptiveValue("font-size", 48, 20);
+	@include adaptiveValue("font-size", 48, 24, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("font-size", 24, 20, 0, 1024, 320);
+	}
 	img {
 		width: 100%;
 		object-fit: cover;
-		@include adaptiveValue("height", 75, 40);
+		@include adaptiveValue("height", 75, 48, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("height", 54, 40, 0, 1024, 320);
+		}
 	}
 	@media (any-hover: hover) {
 		&:hover {
 			opacity: 0.7;
 		}
+	}
+}
+// Padding For Sextions
+.how,
+.our,
+.product,
+.compare,
+.psych,
+.case {
+	@include adaptiveValue("padding-top", 82, 32, 2, 1920, 1024);
+	@include adaptiveValue("padding-bottom", 82, 32, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("padding-top", 32, 24, 0, 1024, 320);
+		@include adaptiveValue("padding-bottom", 32, 24, 0, 1024, 320);
 	}
 }
 // Hover on social icons
@@ -87,83 +107,102 @@ summary {
 	align-items: center;
 	justify-content: center;
 	background-color: $purpleColor;
-	@include adaptiveValue("height", 100, 40);
-	@include adaptiveValue("min-width", 100, 40);
 	@include adaptiveValue("border-radius", 24, 12);
+	@include adaptiveValue("height", 100, 55, 2, 1920, 1024);
+	@include adaptiveValue("min-width", 100, 55, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("height", 55, 40, 0, 1024, 320);
+		@include adaptiveValue("min-width", 55, 40, 0, 1024, 320);
+	}
+	&--play,
+	&--smile,
+	&--users {
+		svg,
+		img {
+			@include adaptiveValue("width", 56, 30, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 30, 24, 0, 1024, 320);
+			}
+		}
+	}
+	&--fire,
+	&--refresh {
+		svg,
+		img {
+			@include adaptiveValue("width", 50, 26, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 26, 18, 0, 1024, 320);
+			}
+		}
+	}
 	&--dollar {
 		svg,
 		img {
-			@include adaptiveValue("width", 34, 14);
+			@include adaptiveValue("width", 34, 22, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 22, 14, 0, 1024, 320);
+			}
 		}
 	}
 	&--psycol {
 		svg,
 		img {
-			@include adaptiveValue("width", 47, 20);
+			@include adaptiveValue("width", 47, 28, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 28, 20, 0, 1024, 320);
+			}
 		}
 	}
 	&--clock {
 		svg,
 		img {
-			@include adaptiveValue("width", 54, 21);
+			@include adaptiveValue("width", 54, 32, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 32, 21, 0, 1024, 320);
+			}
 		}
 	}
 	&--idea {
 		svg,
 		img {
-			@include adaptiveValue("width", 48, 18);
-		}
-	}
-	&--play {
-		svg,
-		img {
-			@include adaptiveValue("width", 56, 22);
-		}
-	}
-	&--smile {
-		svg,
-		img {
-			@include adaptiveValue("width", 56, 22);
+			@include adaptiveValue("width", 48, 28, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 28, 18, 0, 1024, 320);
+			}
 		}
 	}
 	&--down {
 		svg,
 		img {
-			@include adaptiveValue("width", 52, 24);
-		}
-	}
-	&--fire {
-		svg,
-		img {
-			@include adaptiveValue("width", 50, 18);
-		}
-	}
-	&--refresh {
-		svg,
-		img {
-			@include adaptiveValue("width", 50, 18);
-		}
-	}
-	&--users {
-		svg,
-		img {
-			@include adaptiveValue("width", 56, 24);
+			@include adaptiveValue("width", 52, 30, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 30, 24, 0, 1024, 320);
+			}
 		}
 	}
 	// For Number Icons
 	&--number {
 		font-weight: 600;
 		color: $yellowColor;
-		@include adaptiveValue("font-size", 42, 16);
+		@include adaptiveValue("font-size", 42, 24, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 24, 16, 0, 1024, 320);
+		}
 	}
 }
 // Title
 .title {
 	font-weight: 600;
 	line-height: 117%;
-	@include adaptiveValue("font-size", 48, 20);
+	@include adaptiveValue("font-size", 40, 28, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("font-size", 28, 20, 0, 1024, 320);
+	}
 	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 64, 24);
+		@include adaptiveValue("margin-bottom", 64, 28, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("margin-bottom", 28, 24, 0, 1024, 320);
+		}
 	}
 }
 // Text
@@ -173,13 +212,22 @@ summary {
 		font-weight: 600;
 	}
 	&--large {
-		@include adaptiveValue("font-size", 32, 12);
+		@include adaptiveValue("font-size", 32, 16, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+		}
 	}
 	&--min {
-		@include adaptiveValue("font-size", 24, 12);
+		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+		}
 	}
 	&--tiny {
-		@include adaptiveValue("font-size", 20, 12);
+		@include adaptiveValue("font-size", 20, 14, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("font-size", 14, 12, 0, 1024, 320);
+		}
 	}
 }
 // Back Blure
@@ -211,7 +259,10 @@ summary {
 	// .slider__wrapper
 	&__wrapper {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 64, 24);
+			@include adaptiveValue("margin-bottom", 64, 28, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("margin-bottom", 28, 24, 0, 1024, 320);
+			}
 		}
 	}
 	// .slider__slide
@@ -267,8 +318,12 @@ summary {
 		font-weight: 700;
 		line-height: 125%;
 		position: absolute;
-		@include adaptiveValue("padding", 24, 16);
-		@include adaptiveValue("font-size", 32, 20);
+		@include adaptiveValue("padding", 24, 18, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 32, 16, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("padding", 18, 16, 0, 1024, 320);
+			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+		}
 	}
 	// .slide-slider__text
 	&__text {
@@ -297,8 +352,12 @@ summary {
 		justify-content: center;
 		border: 1px solid $purpleColor;
 		transition: background-color 0.5s;
-		@include adaptiveValue("width", 64, 38);
-		@include adaptiveValue("height", 64, 38);
+		@include adaptiveValue("width", 64, 44, 2, 1920, 1024);
+		@include adaptiveValue("height", 64, 44, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("width", 44, 38, 0, 1024, 320);
+			@include adaptiveValue("height", 44, 38, 0, 1024, 320);
+		}
 		svg {
 			@include adaptiveValue("width", 36, 16);
 			path {
