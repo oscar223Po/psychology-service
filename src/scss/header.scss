@@ -39,14 +39,14 @@
 		padding-bottom: toRem(10);
 		transition: min-height 0.5s;
 		justify-content: space-between;
-		@include adaptiveValue("min-height", 112, 77, 2, 1920, 1024);
+		@include adaptiveValue("min-height", 112, 72, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("min-height", 77, 56, 0, 1024, 320);
+			@include adaptiveValue("min-height", 72, 56, 0, 1024, 320);
 		}
 		._header-scroll & {
-			@include adaptiveValue("min-height", 92, 57, 2, 1920, 1024);
+			@include adaptiveValue("min-height", 92, 52, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("min-height", 57, 46, 0, 1024, 320);
+				@include adaptiveValue("min-height", 52, 46, 0, 1024, 320);
 			}
 		}
 	}

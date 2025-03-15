@@ -104,12 +104,12 @@
 	// .footer__label
 	&__label {
 		font-weight: 600;
-		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 24, 14, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 12, 0, 1024, 320);
+			@include adaptiveValue("font-size", 14, 12, 0, 1024, 320);
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 16, 8);
+			@include adaptiveValue("margin-bottom", 16, 8, 0, 1920, 1024);
 		}
 	}
 	// .footer__link
@@ -121,9 +121,9 @@
 			padding: 0;
 		}
 		span {
-			@include adaptiveValue("font-size", 24, 14, 2, 1920, 1024);
+			@include adaptiveValue("font-size", 24, 12, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("font-size", 14, 10, 0, 1024, 320);
+				@include adaptiveValue("font-size", 12, 10, 0, 1024, 320);
 			}
 		}
 	}
@@ -132,18 +132,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@include adaptiveValue("padding-top", 4, 2);
-		@include adaptiveValue("width", 40, 24, 2, 1920, 1024);
-		@include adaptiveValue("height", 40, 24, 2, 1920, 1024);
-		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("width", 24, 20, 0, 1024, 320);
-			@include adaptiveValue("height", 24, 20, 0, 1024, 320);
-		}
+		@include adaptiveValue("padding-top", 3, 1);
+		@include adaptiveValue("width", 40, 20, 0, 1920, 1024);
+		@include adaptiveValue("height", 40, 20, 0, 1920, 1024);
 		svg {
-			@include adaptiveValue("width", 32, 20, 2, 1920, 1024);
-			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("width", 20, 16, 0, 1024, 320);
-			}
+			@include adaptiveValue("width", 32, 16, 0, 1920, 1024);
 		}
 	}
 	// .footer__social

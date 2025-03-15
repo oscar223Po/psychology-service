@@ -72,10 +72,7 @@ $responsiveType: 1;
 // Стилі тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
 body {
 	background-color: #fff;
-	@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
-	@media (max-width: toEm(1024)) {
-		@include adaptiveValue("font-size", 16, 14, 0, 1024, 320);
-	}
+	@include adaptiveValue("font-size", 24, 14, 0, 1920, 1024);
 	// scrollbar-gutter: stable;
 	// Скролл заблоковано
 	.lock & {
@@ -119,7 +116,7 @@ body {
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
 			// max-width: toRem($containerWidth);
-			@include adaptiveValue("max-width", 1670, 940, 0, 1920, 1024);
+			@include adaptiveValue("max-width", 1670, 840, 0, 1920, 1024);
 			margin: 0 auto;
 		}
 		@if ($containerPadding>0) {
@@ -182,7 +179,7 @@ body {
 		@include adaptiveValue("padding-top", 95, 68, 0, 1024, 320);
 	}
 	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 82, 32, 2, 1920, 1024);
+		@include adaptiveValue("margin-bottom", 62, 32, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("margin-bottom", 32, 24, 0, 1024, 320);
 		}
@@ -257,11 +254,11 @@ body {
 		overflow: hidden;
 		position: relative;
 		border: 2px solid rgba(255, 255, 255, 0.95);
-		@include adaptiveValue("border-radius", 24, 18);
-		@include adaptiveValue("padding-top", 92, 36, 2, 1920, 1024);
-		@include adaptiveValue("padding-left", 80, 30, 2, 1920, 1024);
-		@include adaptiveValue("padding-right", 80, 30, 2, 1920, 1024);
-		@include adaptiveValue("padding-bottom", 92, 36, 2, 1920, 1024);
+		@include adaptiveValue("padding-top", 82, 36, 2, 1920, 1024);
+		@include adaptiveValue("padding-left", 70, 30, 2, 1920, 1024);
+		@include adaptiveValue("padding-right", 70, 30, 2, 1920, 1024);
+		@include adaptiveValue("border-radius", 24, 18, 0, 1920, 1024);
+		@include adaptiveValue("padding-bottom", 82, 36, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
 			@include adaptiveValue("padding-top", 36, 24, 0, 1024, 320);
 			@include adaptiveValue("padding-left", 30, 16, 0, 1024, 320);
@@ -305,18 +302,18 @@ body {
 	&__heading {
 		color: #fff;
 		display: grid;
-		@include adaptiveValue("gap", 32, 20, 2, 1920, 1024);
-		@include adaptiveValue("max-width", 890, 490, 2, 1920, 1024);
+		@include adaptiveValue("gap", 32, 16, 2, 1920, 1024);
+		@include adaptiveValue("max-width", 890, 440, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("gap", 20, 12, 0, 1024, 320);
-			@include adaptiveValue("max-width", 490, 190, 0, 1024, 320);
+			@include adaptiveValue("gap", 16, 12, 0, 1024, 320);
+			@include adaptiveValue("max-width", 440, 190, 0, 1024, 320);
 		}
 		@media (max-width: $mobileSmall) {
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 56, 24, 2, 1920, 1024);
+			@include adaptiveValue("margin-bottom", 56, 18, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("margin-bottom", 24, 14, 0, 1024, 320);
+				@include adaptiveValue("margin-bottom", 18, 14, 0, 1024, 320);
 			}
 		}
 	}
@@ -324,12 +321,12 @@ body {
 	&__title {
 		font-weight: 600;
 		line-height: 117%;
-		@include adaptiveValue("font-size", 48, 24, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 48, 18, 2, 1920, 1024);
 		@media (max-width: $mobile) {
 			line-height: 125%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 24, 16, 2, 1024, 375);
+			@include adaptiveValue("font-size", 18, 16, 2, 1024, 375);
 		}
 		@media (max-width: toEm(375)) {
 			@include adaptiveValue("font-size", 16, 14, 0, 375, 320);
@@ -338,36 +335,30 @@ body {
 	// .hero__text
 	&__text {
 		line-height: 125%;
-		@include adaptiveValue("font-size", 32, 16, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 32, 14, 2, 1920, 1024);
 		@media (max-width: $mobile) {
 			line-height: 133%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 13, 2, 1024, 375);
-		}
-		@media (max-width: toEm(375)) {
-			@include adaptiveValue("font-size", 13, 12, 0, 375, 320);
+			@include adaptiveValue("font-size", 14, 12, 0, 1024, 320);
 		}
 	}
 	// .hero__button
 	&__button {
-		@include adaptiveValue("font-size", 24, 14, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 24, 12, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 14, 12, 2, 1024, 370);
-		}
-		@media (max-width: toEm(370)) {
-			@include adaptiveValue("font-size", 12, 11, 0, 370, 320);
+			@include adaptiveValue("font-size", 12, 11, 0, 1024, 320);
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 56, 24, 2, 1920, 1024);
+			@include adaptiveValue("margin-bottom", 56, 18, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("margin-bottom", 24, 14, 0, 1024, 320);
+				@include adaptiveValue("margin-bottom", 18, 14, 0, 1024, 320);
 			}
 		}
 		&.button--yellow {
-			@include adaptiveValue("min-height", 80, 50, 2, 1920, 1024);
+			@include adaptiveValue("min-height", 80, 42, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
-				@include adaptiveValue("min-height", 50, 36, 0, 1024, 320);
+				@include adaptiveValue("min-height", 42, 36, 0, 1024, 320);
 			}
 		}
 	}
@@ -375,16 +366,14 @@ body {
 	&__blockquote {
 		color: #fff;
 		line-height: 133%;
-		@include adaptiveValue("font-size", 24, 16, 2, 1920, 1024);
-		@include adaptiveValue("max-width", 755, 280, 2, $containerWidth, 479.98);
+		@include adaptiveValue("font-size", 24, 14, 2, 1920, 1024);
+		@include adaptiveValue("max-width", 755, 420, 2, 1920, 1024);
 		@media (max-width: $mobile) {
 			line-height: 125%;
 		}
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 11, 0, 1024, 320);
-		}
-		@media (max-width: $mobileSmall) {
-			@include adaptiveValue("max-width", 280, 210, 0, 479.98, 320);
+			@include adaptiveValue("font-size", 14, 11, 0, 1024, 320);
+			@include adaptiveValue("max-width", 420, 210, 0, 1024, 320);
 		}
 	}
 }
@@ -444,12 +433,18 @@ body {
 	}
 }
 .block-how {
-	@include adaptiveValue("padding", 40, 8);
+	@include adaptiveValue("padding", 40, 16, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("padding", 16, 8, 0, 1024, 320);
+	}
 	// .block-how__body
 	&__body {
 		display: flex;
 		position: relative;
-		@include adaptiveValue("gap", 24, 8);
+		@include adaptiveValue("gap", 24, 12, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("gap", 12, 8, 0, 1024, 320);
+		}
 	}
 }
 // Our
@@ -485,7 +480,7 @@ body {
 		display: grid;
 		margin: 0 auto;
 		@include adaptiveValue("gap", 32, 24);
-		@include adaptiveValue("max-width", 1160, 767, 0, 1920, 1024);
+		@include adaptiveValue("max-width", 1160, 720, 0, 1920, 1024);
 	}
 	// .our__block
 	&__block {
@@ -494,7 +489,10 @@ body {
 .block-our {
 	display: grid;
 	@include adaptiveValue("gap", 24, 16);
-	@include adaptiveValue("padding", 40, 14);
+	@include adaptiveValue("padding", 40, 20, 2, 1920, 1024);
+	@media (max-width: toEm(1024)) {
+		@include adaptiveValue("padding", 20, 14, 0, 1024, 320);
+	}
 	box-shadow:
 		rgba($purpleColor, 0.3) 5px 5px,
 		rgba($purpleColor, 0.2) 10px 10px,
@@ -516,7 +514,10 @@ body {
 	// .block-our__content
 	&__content {
 		display: flex;
-		@include adaptiveValue("gap", 24, 8);
+		@include adaptiveValue("gap", 24, 12, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("gap", 12, 8, 0, 1024, 320);
+		}
 	}
 	// .block-our__icon
 	&__icon {
@@ -590,9 +591,9 @@ body {
 	&__heading {
 		display: grid;
 		grid-template-rows: 1fr auto;
-		@include adaptiveValue("min-height", 550, 350, 2, 1920, 1024);
+		@include adaptiveValue("min-height", 550, 300, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("min-height", 350, 300, 2, 1024, 767.98);
+			@include adaptiveValue("min-height", 300, 280, 2, 1024, 767.98);
 		}
 		@media (min-width: $mobile) {
 			row-gap: toRem(15);
@@ -606,12 +607,9 @@ body {
 		font-weight: 600;
 		line-height: 125%;
 		text-align: center;
-		@include adaptiveValue("font-size", 32, 20, 2, 1920, 1024);
-		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 20, 16, 0, 1024, 320);
-		}
+		@include adaptiveValue("font-size", 32, 16, 0, 1920, 1024);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 24, 16);
+			@include adaptiveValue("margin-bottom", 24, 16, 0, 1920, 1024);
 		}
 	}
 	// .item-product__list
@@ -634,9 +632,9 @@ body {
 		font-weight: 600;
 		line-height: 125%;
 		text-align: center;
-		@include adaptiveValue("font-size", 32, 22, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 32, 20, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 22, 16, 0, 1024, 320);
+			@include adaptiveValue("font-size", 20, 16, 0, 1024, 320);
 		}
 	}
 	// .item-product__button
@@ -650,14 +648,14 @@ body {
 	&__items {
 		display: grid;
 		border-top: 1px solid rgba($purpleColor, 0.45);
-		@include adaptiveValue("gap", 24, 16);
 		@include adaptiveValue("margin-top", 38, 22);
 		@include adaptiveValue("padding-top", 38, 22);
+		@include adaptiveValue("gap", 24, 16, 0, 1920, 1024);
 	}
 	// .item-product__item
 	&__item {
 		display: flex;
-		@include adaptiveValue("gap", 24, 12);
+		@include adaptiveValue("gap", 24, 12, 0, 1920, 1024);
 	}
 }
 // Compare
@@ -700,7 +698,10 @@ body {
 	}
 	// .compare__body
 	&__body {
-		@include adaptiveValue("padding", 40, 8);
+		@include adaptiveValue("padding", 40, 16, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("padding", 16, 8, 0, 1024, 320);
+		}
 	}
 	// .compare__head
 	&__head {
@@ -708,7 +709,7 @@ body {
 		grid-template-columns: repeat(2, 1fr);
 		@include adaptiveValue("gap", 24, 7);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 24, 12);
+			@include adaptiveValue("margin-bottom", 24, 12, 0, 1920, 1024);
 		}
 	}
 	// .compare__subtitle
@@ -719,9 +720,9 @@ body {
 		align-items: center;
 		@include adaptiveValue("padding", 16, 8);
 		@include adaptiveValue("border-radius", 16, 12);
-		@include adaptiveValue("font-size", 32, 16, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 32, 14, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 10, 0, 1024, 320);
+			@include adaptiveValue("font-size", 14, 10, 0, 1024, 320);
 		}
 		&:first-child {
 			background-color: $yellowColor;
@@ -765,16 +766,16 @@ body {
 		@include adaptiveValue("padding-bottom", 18, 4);
 		@include adaptiveValue("padding-left", 18, 4);
 		@include adaptiveValue("padding-right", 18, 4);
-		@include adaptiveValue("font-size", 32, 16, 2, 1920, 1024);
+		@include adaptiveValue("font-size", 32, 14, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 16, 10, 0, 1024, 320);
+			@include adaptiveValue("font-size", 14, 10, 0, 1024, 320);
 		}
 		&::before {
 			content: "";
 			border-radius: 50%;
-			@include adaptiveValue("height", 16, 4);
-			@include adaptiveValue("min-width", 16, 4);
-			@include adaptiveValue("margin-top", 13, 5);
+			@include adaptiveValue("height", 14, 4);
+			@include adaptiveValue("min-width", 14, 4);
+			@include adaptiveValue("margin-top", 7, 4);
 		}
 		&:first-child {
 			&::before {
@@ -890,7 +891,7 @@ body {
 }
 // Chose
 .chose {
-	@include adaptiveValue("padding-top", 82, 32, 2, 1920, 1024);
+	@include adaptiveValue("padding-top", 62, 32, 2, 1920, 1024);
 	@media (max-width: toEm(1024)) {
 		@include adaptiveValue("padding-top", 32, 24, 0, 1024, 320);
 	}
@@ -924,7 +925,10 @@ body {
 	// .chose__main
 	&__main {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 82, 24);
+			@include adaptiveValue("margin-bottom", 62, 32, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("margin-bottom", 32, 24, 0, 1024, 320);
+			}
 		}
 	}
 	// .chose__quest
@@ -962,10 +966,7 @@ body {
 	// .main-chose__items
 	&__items {
 		display: grid;
-		@include adaptiveValue("gap", 40, 26, 2, 1920, 1024);
-		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("gap", 26, 20, 0, 1024, 320);
-		}
+		@include adaptiveValue("gap", 40, 20, 0, 1920, 1024);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 64, 28, 2, 1920, 1024);
 			@media (max-width: toEm(1024)) {
@@ -977,7 +978,10 @@ body {
 	&__item {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 24, 8);
+		@include adaptiveValue("gap", 24, 14, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("gap", 14, 8, 0, 1024, 320);
+		}
 	}
 	// .main-chose__icon
 	&__icon {
@@ -992,9 +996,9 @@ body {
 		a {
 			&.button--yellow {
 				width: 100%;
-				@include adaptiveValue("max-width", 470, 260, 2, 1920, 1024);
+				@include adaptiveValue("max-width", 470, 220, 2, 1920, 1024);
 				@media (max-width: toEm(1024)) {
-					@include adaptiveValue("max-width", 260, 200, 0, 1024, 320);
+					@include adaptiveValue("max-width", 220, 200, 0, 1024, 320);
 				}
 				&.button--yellow {
 					padding: 0;
@@ -1011,10 +1015,7 @@ body {
 	&__title {
 		font-weight: 600;
 		line-height: 117%;
-		@include adaptiveValue("font-size", 48, 24, 2, 1920, 1024);
-		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("font-size", 24, 20, 0, 1024, 320);
-		}
+		@include adaptiveValue("font-size", 48, 20, 0, 1920, 1024);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 24, 12);
 		}
@@ -1022,9 +1023,9 @@ body {
 	// .quest-chose__button
 	&__button {
 		width: 100%;
-		@include adaptiveValue("max-width", 470, 260, 2, 1920, 1024);
+		@include adaptiveValue("max-width", 470, 220, 2, 1920, 1024);
 		@media (max-width: toEm(1024)) {
-			@include adaptiveValue("max-width", 260, 200, 0, 1024, 320);
+			@include adaptiveValue("max-width", 220, 200, 0, 1024, 320);
 		}
 		&.button--yellow {
 			padding: 0;
