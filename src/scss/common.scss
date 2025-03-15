@@ -389,8 +389,12 @@ summary {
 		background-color: #fff;
 		border: 1px solid $purpleColor;
 		transition: background-color 0.5s;
-		@include adaptiveValue("width", 24, 12);
-		@include adaptiveValue("height", 24, 12);
+		@include adaptiveValue("width", 24, 15, 2, 1920, 1024);
+		@include adaptiveValue("height", 24, 15, 2, 1920, 1024);
+		@media (max-width: toEm(1024)) {
+			@include adaptiveValue("width", 15, 12, 0, 1024, 320);
+			@include adaptiveValue("height", 15, 12, 0, 1024, 320);
+		}
 		@media (max-width: $mobileSmall) {
 			border: 0.2px solid $purpleColor;
 		}

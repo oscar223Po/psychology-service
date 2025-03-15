@@ -193,16 +193,22 @@ body {
 		position: absolute;
 		&--one {
 			@include adaptiveValue("top", -150, -30);
-			@include adaptiveValue("width", 438, 100);
 			@include adaptiveValue("right", -110, -24);
+			@include adaptiveValue("width", 438, 250, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 250, 100, 0, 1024, 320);
+			}
 			@media (max-width: $mobile) {
 				display: none;
 			}
 		}
 		&--two {
-			@include adaptiveValue("width", 439, 120);
 			@include adaptiveValue("right", -115, -29);
 			@include adaptiveValue("bottom", -130, -35);
+			@include adaptiveValue("width", 439, 250, 2, 1920, 1024);
+			@media (max-width: toEm(1024)) {
+				@include adaptiveValue("width", 250, 120, 0, 1024, 320);
+			}
 		}
 	}
 	// .hero__container
@@ -806,7 +812,9 @@ body {
 	// .psych__title
 	&__title {
 		&.title {
-			margin: 0;
+			&:not(:last-child) {
+				margin-bottom: 0px;
+			}
 		}
 	}
 	// .psych__slider
@@ -871,7 +879,9 @@ body {
 	// .case__title
 	&__title {
 		&.title {
-			margin: 0;
+			&:not(:last-child) {
+				margin-bottom: 0px;
+			}
 		}
 	}
 	// .case__slider
