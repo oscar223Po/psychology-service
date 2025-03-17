@@ -253,9 +253,6 @@ summary::marker {
   position: absolute;
   background: linear-gradient(66deg,rgba(255,255,255,.35) 0,rgba(255,255,255,.35) 100%)
 }
-.slider.swiper {
-  overflow: visible
-}
 .slide-slider__picture {
   overflow: hidden;
   position: relative;
@@ -1933,6 +1930,9 @@ summary::marker {
   }
 }
 @media (max-width:47.99875em) {
+  .slider.swiper {
+    overflow: visible
+  }
   .controls {
     display: none
   }

@@ -219,7 +219,9 @@ summary {
 }
 // Slider
 .slider.swiper {
-	overflow: visible;
+	@media (max-width: $mobile) {
+		overflow: visible;
+	}
 }
 .slider {
 	// .slider__wrapper
