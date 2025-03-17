@@ -219,6 +219,10 @@ summary {
 }
 // Slider
 .slider.swiper {
+	@media (min-width: $mobile) {
+		margin: toRem(0) toRem(-10);
+		padding: toRem(0) toRem(10);
+	}
 	@media (max-width: $mobile) {
 		overflow: visible;
 	}

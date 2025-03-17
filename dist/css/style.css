@@ -862,6 +862,10 @@ summary::marker {
   display: none!important
 }
 @media (min-width:47.99875em) {
+  .slider.swiper {
+    margin: 0 -.625rem;
+    padding: 0 .625rem
+  }
   .footer::after {
     bottom: 0;
     -webkit-transform: translate(0,50%);
