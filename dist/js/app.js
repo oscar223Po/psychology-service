@@ -3704,6 +3704,7 @@
             }));
         }
     }), 0);
+    history.scrollRestoration = "manual";
     window["FLS"] = false;
     addLoadedClass();
     headerScroll();
